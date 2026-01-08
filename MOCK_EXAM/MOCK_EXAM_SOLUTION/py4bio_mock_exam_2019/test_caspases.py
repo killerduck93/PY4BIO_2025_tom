@@ -57,7 +57,7 @@ python_files = ['caspases_cutter.py', 'caspases_cutter_cgi.py', 'caspases_cutter
 
 for filename in python_files:
     try:
-        with open(filename, 'r') as f:
+        with open(filename, 'r', encoding='utf-8') as f:
             compile(f.read(), filename, 'exec')
         print_test(f"Sintassi '{filename}'", True, "Nessun errore di sintassi")
     except SyntaxError as e:
@@ -158,14 +158,14 @@ except Exception as e:
 print_section("TEST 7: Verifica CGI Requirements")
 
 try:
-    with open('caspases_cutter_cgi.py', 'r') as f:
+    with open('caspases_cutter_cgi.py', 'r', encoding='utf-8') as f:
         first_line = f.readline()
     
     has_shebang = first_line.startswith('#!')
     print_test("CGI ha shebang", has_shebang, 
               f"Prima riga: {first_line.strip()[:30]}...")
     
-    with open('caspases_cutter_cgi.py', 'r') as f:
+    with open('caspases_cutter_cgi.py', 'r', encoding='utf-8') as f:
         content = f.read()
     
     has_content_type = "Content-Type: text/html" in content
@@ -184,7 +184,7 @@ except Exception as e:
 print_section("TEST 8: Verifica HTML Form")
 
 try:
-    with open('caspases_form.html', 'r') as f:
+    with open('caspases_form.html', 'r', encoding='utf-8') as f:
         html_content = f.read()
     
     has_form = '<form' in html_content
@@ -206,7 +206,7 @@ except Exception as e:
 print_section("TEST 9: Verifica Flask Setup")
 
 try:
-    with open('caspases_cutter_flask.py', 'r') as f:
+    with open('caspases_cutter_flask.py', 'r', encoding='utf-8') as f:
         flask_content = f.read()
     
     has_flask_import = "from flask import Flask" in flask_content

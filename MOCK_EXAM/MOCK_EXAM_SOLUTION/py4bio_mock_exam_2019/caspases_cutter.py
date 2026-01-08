@@ -88,15 +88,16 @@ def find_caspase_cleavage_sites(record, caspase_patterns):
     sequence = str(record.seq)
     seq_length = len(sequence)
     
-    # Extract accession and name from record ID
-    # Format: "sp|P17405|ASM_HUMAN" or just "P17405"
+    # Extract accession and name from record
+    # record.id format: "sp|P17405|ASM_HUMAN" 
+    # record.name format: "ASM_HUMAN"
     if '|' in record.id:
         parts = record.id.split('|')
         accession = parts[1]
-        protein_name = parts[2] if len(parts) > 2 else record.description.split()[0]
+        protein_name = parts[2] if len(parts) > 2 else record.name
     else:
         accession = record.id
-        protein_name = record.description.split()[0] if record.description else "UNKNOWN"
+        protein_name = record.name if hasattr(record, 'name') and record.name else accession
     
     # Search for each caspase pattern
     for caspase_type, pattern in caspase_patterns.items():
