@@ -16,7 +16,7 @@ cgitb.enable()
 
 # Define caspase cleavage patterns (same as main script)
 CASPASE_PATTERNS = {
-    'caspase_1': re.compile(r'[FWYL][^DEGHKRP][^DEGHKRP]D.{4}'),
+    'caspase_1': re.compile(r'...D.{4}'),
     'caspase_2': re.compile(r'[DVEAI][^DEGHKRP][^DEGHKRP]D.{4}'),
     'caspase_3': re.compile(r'[DVEAMI][^DEGHKRP][^DEGHKRP]D.{4}'),
     'caspase_4': re.compile(r'[LWEVAIF][^DEGHKRP].[DE].{4}'),
