@@ -1,0 +1,8 @@
+(lp0
+I2
+aVApples
+p1
+aI5
+aVOranges
+p2
+a.

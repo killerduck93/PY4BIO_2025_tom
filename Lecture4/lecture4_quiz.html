@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lecture 4 — Python for Bioinformatics: MCQ Quiz (Regex, Dicts & Classes)</title>
+  <style>
+    :root {
+      --bg: #0b0c10; --panel: #12131a; --ink: #e9eef5; --muted: #b8c1d1; --accent: #6ea8fe;
+      --ok: #38c172; --bad: #ff6b6b; --warn: #ffb020; --card: #171924; --border: #2a2f3a; --focus: #99c2ff;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; background: var(--bg); color: var(--ink); font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+    a { color: var(--accent); }
+    .wrap { max-width: 1000px; margin: 0 auto; padding: 24px; }
+    header { position: sticky; top: 0; z-index: 5; background: linear-gradient(180deg, rgba(11,12,16,.98) 0%, rgba(11,12,16,.92) 100%); backdrop-filter: blur(6px); border-bottom: 1px solid var(--border); }
+    header .wrap { display: flex; align-items: center; gap: 16px; padding-block: 14px; }
+    .title { font-weight: 700; letter-spacing: .3px; }
+    .subtitle { color: var(--muted); font-size: .95rem; }
+    .progress { margin-left: auto; display: flex; align-items: center; gap: 10px; font-variant-numeric: tabular-nums; }
+    .bar { width: 180px; height: 8px; background: #202432; border-radius: 999px; overflow: hidden; border: 1px solid var(--border); }
+    .bar>span { display: block; height: 100%; width: 0%; background: linear-gradient(90deg, var(--accent), #9ad0ff); transition: width .2s ease; }
+    .panel { background: var(--panel); border: 1px solid var(--border); border-radius: 16px; padding: 18px; box-shadow: 0 10px 30px rgba(0,0,0,.25); }
+    .controls { position: sticky; bottom: 0; z-index: 4; background: linear-gradient(180deg, rgba(11,12,16,0) 0%, rgba(11,12,16,1) 40% 100%); padding-top: 24px; }
+    .controls .panel { display: flex; gap: 12px; align-items: center; justify-content: space-between; }
+    button { appearance: none; border: 1px solid var(--border); background: var(--accent); color: #0b1220; font-weight: 700; padding: 12px 16px; border-radius: 12px; cursor: pointer; transition: transform .02s ease, filter .2s ease; }
+    button.secondary { background: #23283a; color: var(--ink); }
+    button.ghost { background: transparent; color: var(--ink); }
+    button:hover { filter: brightness(1.05); }
+    button:active { transform: translateY(1px); }
+    .grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+    @media (min-width: 900px) { .grid { grid-template-columns: 1fr 1fr; } }
+    .question { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 16px; }
+    .question h3 { margin: 0 0 10px; font-size: 1.05rem; }
+    .qid { font-weight: 700; color: var(--muted); margin-right: 6px; }
+    .choices { display: grid; gap: 8px; margin-top: 8px; }
+    .choice { display: flex; align-items: flex-start; gap: 10px; padding: 10px; border: 1px solid var(--border); border-radius: 12px; background: #121420; }
+    .choice:hover { border-color: #33405a; }
+    input[type="radio"] { appearance: none; width: 18px; height: 18px; border: 2px solid #5a6b86; border-radius: 999px; margin-top: 2px; position: relative; outline: none; }
+    input[type="radio"]:focus { box-shadow: 0 0 0 3px rgba(153, 194, 255, .35); border-color: var(--focus); }
+    input[type="radio"]:checked::after { content: ""; position: absolute; inset: 3px; border-radius: 999px; background: var(--accent); }
+    .feedback { margin-top: 10px; font-size: .95rem; display: none; padding: 10px; border-radius: 10px; }
+    .question.correct .feedback { display: block; background: rgba(56, 193, 114, .12); border: 1px solid rgba(56, 193, 114, .3); }
+    .question.incorrect .feedback { display: block; background: rgba(255, 107, 107, .12); border: 1px solid rgba(255, 107, 107, .3); }
+    .question.correct { border-color: rgba(56, 193, 114, .5); }
+    .question.incorrect { border-color: rgba(255, 107, 107, .5); }
+    .badge { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: .8rem; font-weight: 700; }
+    .badge.ok { background: rgba(56,193,114,.18); color: #9af2bf; border: 1px solid rgba(56,193,114,.45); }
+    .badge.bad { background: rgba(255,107,107,.18); color: #ffc1c1; border: 1px solid rgba(255,107,107,.45); }
+    .result { display: none; }
+    .result.visible { display: block; }
+    .result h2 { margin: 0 0 8px; font-size: 1.3rem; }
+    .result .scorebig { font-size: 2.2rem; font-weight: 800; letter-spacing: .5px; }
+    .hint { color: var(--muted); font-size: .95rem; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div>
+        <div class="title">Lecture 4 — Python for Bioinformatics</div>
+        <div class="subtitle">Multiple-Choice Quiz (20 questions) • Regular Expressions, Dictionaries & Classes</div>
+      </div>
+      <div class="progress" aria-live="polite">
+        <span class="hint">Answered:</span>
+        <div class="bar" aria-hidden="true"><span id="barFill"></span></div>
+        <div><span id="answeredCount">0</span>/<span id="totalCount">20</span></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="intro" class="panel" style="margin-bottom: 16px;">
+      <p>Choose one answer for each question. Click <strong>Check answers</strong> to see your score and explanations. You can <strong>Reset</strong> to try again.</p>
+      <p class="hint">Tip: you can navigate with Tab and arrow keys; labels are clickable.</p>
+    </section>
+
+    <form id="quizForm" novalidate>
+      <div class="grid" id="questions"></div>
+
+      <div class="controls">
+        <div class="panel">
+          <div>
+            <button type="submit" id="submitBtn">Check answers</button>
+            <button type="button" class="secondary" id="resetBtn">Reset</button>
+            <button type="button" class="ghost" id="printBtn">Print / Save PDF</button>
+          </div>
+          <div id="result" class="result" aria-live="polite"></div>
+        </div>
+      </div>
+    </form>
+  </main>
+
+  <template id="questionTmpl">
+    <div class="question" data-qid="">
+      <h3><span class="qid"></span><span class="qtext"></span></h3>
+      <div class="choices"></div>
+      <div class="feedback"></div>
+    </div>
+  </template>
+
+  <script>
+    const DATA = [
+      { id: 1, q: 'In Python regex, <code>\\d</code> matches:', opts: ['Any decimal digit [0–9]','Any non-digit','Any whitespace','Any “word” char (letters/digits/underscore)'], correct: 0, expl: '<code>\\d</code> is shorthand for <code>[0-9]</code>. See “predefined classes.”' },
+      { id: 2, q: 'What does the character class <code>[^5]</code> mean?', opts: ['Match the digit 5 exactly','Match start of a line','Match anything except 5','Negate the whole pattern'], correct: 2, expl: 'Inside <code>[]</code>, <code>^</code> negates the set: “anything but 5.”' },
+      { id: 3, q: 'Which regex matches a TATA-box-like pattern: <code>TATAA</code> followed by 3 nucleotides then <code>TT</code>?', opts: ['<code>TATAA[ACGT]TT</code>','<code>TATAA[ACGT]{3}TT</code>','<code>TATAA\\w{3}TT</code> (DNA-safe)','<code>TATAA...TT</code>'], correct: 1, expl: 'Use a character class for nucleotides and a quantifier: <code>[ACGT]{3}</code>.' },
+      { id: 4, q: 'The metacharacter <code>.</code> matches…', opts: ['Any character including newline','Any character except newline','Only letters','Only spaces'], correct: 1, expl: 'Dot matches any char except newline unless DOTALL is set.' },
+      { id: 5, q: 'Which quantifier makes the preceding item optional (zero or one)?', opts: ['<code>*</code>','<code>+</code>','<code>?</code>','<code>{2,}</code>'], correct: 2, expl: '<code>?</code> means “zero or one.”' },
+      { id: 6, q: 'Regex quantifiers are greedy by default. This means…', opts: ['They always prefer the shortest match','They always prefer the leftmost match only','They match the largest possible span that still satisfies the pattern','They backtrack disabled'], correct: 2, expl: 'Greedy quantifiers try to match as much as possible while still matching overall.' },
+      { id: 7, q: 'To literally match the string <code>\\section</code> in Python, which pattern is correct?', opts: ['<code>"\\section"</code>','<code>"\\\\section"</code>','<code>r"\\section"</code>','Both B and C'], correct: 3, expl: 'Either escape backslashes in a normal string or use a raw string <code>r"\\section"</code>.' },
+      { id: 8, q: 'Which function returns a <strong>list</strong> of all non-overlapping matches?', opts: ['<code>re.match()</code>','<code>re.search()</code>','<code>re.findall()</code>','<code>re.finditer()</code>'], correct: 2, expl: '<code>findall</code> returns a list; <code>finditer</code> returns an iterator of Match objects.' },
+      { id: 9, q: 'Which returns an <strong>iterator</strong> over Match objects?', opts: ['<code>re.finditer()</code>','<code>re.findall()</code>','<code>re.scan()</code>','<code>re.groups()</code>'], correct: 0, expl: '<code>finditer</code> yields matches with spans and groups.' },
+      { id: 10, q: 'With <code>re.MULTILINE</code>, anchors <code>^</code> and <code>$</code> match…', opts: ['Only start/end of the entire string','Start/end of each line within the string','Only word boundaries','They are disabled'], correct: 1, expl: 'MULTILINE makes <code>^</code>/<code>$</code> work per line.' },
+      { id: 11, q: 'Which anchor matches <strong>the beginning of the string only</strong> (not each line)?', opts: ['<code>^</code>','<code>\\A</code>','<code>\\Z</code>','<code>\\b</code>'], correct: 1, expl: '<code>\\A</code> anchors to start of the string; <code>^</code> can be per-line with MULTILINE.' },
+      { id: 12, q: 'In a regex Match object, <code>group(0)</code> returns:', opts: ['The first capturing group','The entire match','The last capturing group','The pattern string'], correct: 1, expl: 'Group 0 is always the full match.' },
+      { id: 13, q: 'Which method replaces all matches with a replacement string?', opts: ['<code>re.sub()</code>','<code>re.swap()</code>','<code>re.replace()</code>','<code>re.overwrite()</code>'], correct: 0, expl: 'Use <code>re.sub(pattern, repl, string[, count])</code>.' },
+      { id: 14, q: 'How do you define a <strong>named group</strong> in Python regex?', opts: ['<code>(?&lt;name&gt;...)</code>','<code>(?P&lt;name&gt;...)</code>','<code>&lt;name&gt;(...)</code>','<code>(name...)</code>'], correct: 1, expl: 'Python uses <code>(?P&lt;name&gt;...)</code> for named groups.' },
+      { id: 15, q: 'Which pattern matches a <strong>repeated adjacent word</strong> like “the the”?', opts: ['<code>\\b\\w+\\s+\\1</code>','<code>(?P&lt;word&gt;\\b\\w+)\\s+(?P=word)</code>','<code>(\\w+)\\s+</code>','<code>\\bthe\\b\\s+\\bthe\\b</code> (hard-coded)'], correct: 1, expl: 'Named backreference <code>(?P=word)</code> repeats the same captured word.' },
+      { id: 16, q: 'Which compilation flag makes <code>.</code> also match newlines?', opts: ['<code>re.MULTILINE</code>','<code>re.DOTALL</code>','<code>re.IGNORECASE</code>','<code>re.LOCALE</code>'], correct: 1, expl: '<code>re.DOTALL</code> lets dot match newline too.' },
+      { id: 17, q: 'Which snippet correctly compiles a case-insensitive pattern for <code>"he"</code>?', opts: ['<code>re.compile("he", re.IGNORECASE)</code>','<code>re.compile("he", re.DOTALL)</code>','<code>re.compile("he", re.MULTILINE)</code>','<code>re.compile("he")</code> (always case-insensitive)'], correct: 0, expl: 'Use <code>re.IGNORECASE</code> for case-insensitive matching.' },
+      { id: 18, q: 'Given a phonebook dict, which gets a value or an empty list if the key is missing?', opts: ['<code>d[key] or []</code>','<code>d.get(key, [])</code>','<code>d.fetch(key, [])</code>','<code>d.pull(key, [])</code>'], correct: 1, expl: '<code>dict.get</code> supports a default value.' },
+      { id: 19, q: 'In the <code>Car</code> class example, <code>self</code> refers to:', opts: ['The class object itself','The current module','The instance being operated on','The parent class'], correct: 2, expl: 'Methods receive the instance as the first parameter, conventionally named <code>self</code>.' },
+      { id: 20, q: 'In the reverse-complement examples, which slice reverses a string?', opts: ['<code>s[::-1]</code>','<code>s[1:-1]</code>','<code>s[: :]</code>','<code>s[-1:0]</code>'], correct: 0, expl: '<code>s[::-1]</code> steps by −1, yielding the reversed string.' },
+    ];
+
+    const questionsEl = document.getElementById('questions');
+    const tmpl = document.getElementById('questionTmpl');
+    const resultEl = document.getElementById('result');
+    const form = document.getElementById('quizForm');
+    const answeredCountEl = document.getElementById('answeredCount');
+    const totalCountEl = document.getElementById('totalCount');
+    const barFillEl = document.getElementById('barFill');
+
+    totalCountEl.textContent = DATA.length;
+
+    function renderQuestions() {
+      questionsEl.innerHTML = '';
+      DATA.forEach((item) => {
+        const node = tmpl.content.cloneNode(true);
+        const q = node.querySelector('.question');
+        q.dataset.qid = item.id;
+        q.id = `q${item.id}`;
+        node.querySelector('.qid').textContent = `${item.id}) `;
+        node.querySelector('.qtext').innerHTML = item.q;
+        const choices = node.querySelector('.choices');
+        item.opts.forEach((opt, i) => {
+          const choiceId = `q${item.id}_${i}`;
+          const wrap = document.createElement('label');
+          wrap.className = 'choice';
+          const radio = document.createElement('input');
+          radio.type = 'radio';
+          radio.name = `q${item.id}`;
+          radio.value = i;
+          radio.id = choiceId;
+          radio.addEventListener('change', updateProgress);
+          const text = document.createElement('div');
+          text.innerHTML = `<strong>${String.fromCharCode(65+i)}.</strong> <span>${opt}</span>`;
+          wrap.appendChild(radio);
+          wrap.appendChild(text);
+          choices.appendChild(wrap);
+        });
+        questionsEl.appendChild(node);
+      });
+    }
+
+    function getSelections() {
+      const entries = [];
+      DATA.forEach(item => {
+        const selected = document.querySelector(`input[name="q${item.id}"]:checked`);
+        entries.push({ id: item.id, choice: selected ? Number(selected.value) : null });
+      });
+      return entries;
+    }
+
+    function updateProgress() {
+      const selections = getSelections();
+      const answered = selections.filter(s => s.choice !== null).length;
+      answeredCountEl.textContent = answered;
+      const pct = Math.round((answered / DATA.length) * 100);
+      barFillEl.style.width = pct + '%';
+    }
+
+    function grade() {
+      const selections = getSelections();
+      let correct = 0;
+      let unanswered = 0;
+
+      selections.forEach(sel => {
+        const meta = DATA.find(d => d.id === sel.id);
+        const card = document.getElementById(`q${sel.id}`);
+        card.classList.remove('correct','incorrect');
+        const fb = card.querySelector('.feedback');
+        if (sel.choice === null) {
+          unanswered++;
+          fb.innerHTML = `<span class="badge bad">Unanswered</span> Please select an option.<br>${meta.expl}`;
+          card.classList.add('incorrect');
+        } else if (sel.choice === meta.correct) {
+          correct++;
+          fb.innerHTML = `<span class="badge ok">Correct</span> ${meta.expl}`;
+          card.classList.add('correct');
+        } else {
+          const letter = ['A','B','C','D'][meta.correct];
+          fb.innerHTML = `<span class="badge bad">Incorrect</span> Correct answer: <strong>${letter}</strong>. ${meta.expl}`;
+          card.classList.add('incorrect');
+        }
+      });
+
+      const scorePct = Math.round((correct / DATA.length) * 100);
+      resultEl.classList.add('visible');
+      resultEl.innerHTML = `
+        <h2>Your result</h2>
+        <div class="scorebig">${correct}/${DATA.length} (<strong>${scorePct}%</strong>)</div>
+        <div class="hint">${unanswered ? (unanswered + ' unanswered question' + (unanswered>1?'s':'')) : 'All questions answered.'}</div>
+      `;
+      document.getElementById('submitBtn').textContent = 'Re-check';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function resetQuiz() {
+      form.reset();
+      document.querySelectorAll('.question').forEach(q => q.classList.remove('correct','incorrect'));
+      document.querySelectorAll('.feedback').forEach(f => f.textContent = '');
+      resultEl.classList.remove('visible');
+      resultEl.innerHTML = '';
+      document.getElementById('submitBtn').textContent = 'Check answers';
+      updateProgress();
+    }
+
+    document.getElementById('resetBtn').addEventListener('click', resetQuiz);
+    document.getElementById('printBtn').addEventListener('click', () => window.print());
+    form.addEventListener('submit', (e) => { e.preventDefault(); grade(); });
+
+    renderQuestions();
+    updateProgress();
+  </script>
+</body>
+</html>
+

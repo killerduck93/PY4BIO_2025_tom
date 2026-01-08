@@ -1,0 +1,774 @@
+********************************************************************************
+MEME - Motif discovery tool
+********************************************************************************
+MEME version 5.4.1 (Release date: Sat Aug 21 19:23:23 2021 -0700)
+
+For further information on how to interpret these results please access https://meme-suite.org/meme.
+To get a copy of the MEME Suite software please access https://meme-suite.org.
+
+********************************************************************************
+
+
+********************************************************************************
+REFERENCE
+********************************************************************************
+If you use this program in your research, please cite:
+
+Timothy L. Bailey and Charles Elkan,
+"Fitting a mixture model by expectation maximization to
+discover motifs in biopolymers",
+Proceedings of the Second International Conference on Intelligent Systems
+for Molecular Biology, pp. 28-36, AAAI Press, Menlo Park, California, 1994.
+********************************************************************************
+
+
+********************************************************************************
+TRAINING SET
+********************************************************************************
+PRIMARY SEQUENCES= E2F_up_promoters.fa
+CONTROL SEQUENCES= --none--
+ALPHABET= ACGT
+Sequence name            Weight Length  Sequence name            Weight Length  
+-------------            ------ ------  -------------            ------ ------  
+hg19_knownGene_uc021vdr. 1.0000   1000  hg19_knownGene_uc003csh. 1.0000   1000  
+hg19_knownGene_uc003fqz. 1.0000   1000  hg19_knownGene_uc031rzi. 1.0000   1000  
+hg19_knownGene_uc003gdi. 1.0000   1000  hg19_knownGene_uc003gdl. 1.0000   1000  
+hg19_knownGene_uc003hfx. 1.0000   1000  hg19_knownGene_uc003jkc. 1.0000   1000  
+hg19_knownGene_uc003ldb. 1.0000   1000  hg19_knownGene_uc003usv. 1.0000   1000  
+hg19_knownGene_uc003usw. 1.0000   1000  hg19_knownGene_uc003usx. 1.0000   1000  
+hg19_knownGene_uc003wfb. 1.0000   1000  hg19_knownGene_uc003xql. 1.0000   1000  
+hg19_knownGene_uc001lyw. 1.0000   1000  hg19_knownGene_uc001nsg. 1.0000   1000  
+hg19_knownGene_uc009yej. 1.0000   1000  hg19_knownGene_uc010qyd. 1.0000   1000  
+hg19_knownGene_uc021qkj. 1.0000   1000  hg19_knownGene_uc001uuz. 1.0000   1000  
+hg19_knownGene_uc002nsn. 1.0000   1000  hg19_knownGene_uc002nso. 1.0000   1000  
+hg19_knownGene_uc002wlp. 1.0000   1000  hg19_knownGene_uc002wlq. 1.0000   1000  
+********************************************************************************
+
+********************************************************************************
+COMMAND LINE SUMMARY
+********************************************************************************
+This information can also be useful in the event you wish to report a
+problem with the MEME software.
+
+command: meme E2F_up_promoters.fa -dna -oc . -nostatus -time 14400 -mod zoops -nmotifs 3 -minw 6 -maxw 50 -objfun classic -revcomp -markov_order 0 
+
+model:  mod=         zoops    nmotifs=         3    evt=           inf
+objective function:           em=       E-value of product of p-values
+                              starts=   E-value of product of p-values
+strands: + -
+width:  minw=            6    maxw=           50
+nsites: minsites=        2    maxsites=       24    wnsites=       0.8
+theta:  spmap=         uni    spfuzz=        0.5
+em:     prior=   dirichlet    b=            0.01    maxiter=        50
+        distance=    1e-05
+trim:   wg=             11    ws=              1    endgaps=       yes
+data:   n=           24000    N=              24
+sample: seed=            0    hsfrac=          0
+        searchsize=  24000    norand=         no    csites=       1000
+Letter frequencies in dataset:
+A 0.21 C 0.29 G 0.29 T 0.21 
+Background letter frequencies (from file dataset with add-one prior applied):
+A 0.21 C 0.29 G 0.29 T 0.21 
+Background model order: 0
+********************************************************************************
+
+
+********************************************************************************
+MOTIF GCCSGGSGCGGTGGCTCACGCCTSTAATCCCAGCACTTTGGGAGGCCGAG MEME-1	width =  50  sites =  12  llr = 569  E-value = 3.5e-109
+********************************************************************************
+--------------------------------------------------------------------------------
+	Motif GCCSGGSGCGGTGGCTCACGCCTSTAATCCCAGCACTTTGGGAGGCCGAG MEME-1 Description
+--------------------------------------------------------------------------------
+Simplified        A  :::21::::2:22:2328:3::::28a2:2:8:191:1::2:a:2::2a:
+pos.-specific     C  :894:1719::::17:8:8:8823:2::88a::9:81:1::::::a92::
+probability       G  a1:49939:8a:89::13272::6::::::::a:::23:88a:a8::7:a
+matrix            T  :11:::::1::8::28:::112818::82::2::118792::::::1:::
+
+         bits    2.3                           *               *     * 
+                 2.0                           *               *     * 
+                 1.8 *         *               *   * * *   *  *** *  **
+                 1.6 *         **          * ****  *** *   *  *** *  **
+Relative         1.4 * * ** ** ** * * *    * ****  *****   *  *** ** **
+Entropy          1.1 * * ** ******* * **  ** ************* ********* **
+(68.5 bits)      0.9 *** ********** ****  ** *********************** **
+                 0.7 *** ******************* **************************
+                 0.5 **************************************************
+                 0.2 **************************************************
+                 0.0 --------------------------------------------------
+
+Multilevel           GCCCGGCGCGGTGGCTCACGCCTGTAATCCCAGCACTTTGGGAGGCCGAG
+consensus               G  G        A G A   C             G            
+sequence                                                               
+                                                                       
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif GCCSGGSGCGGTGGCTCACGCCTSTAATCCCAGCACTTTGGGAGGCCGAG MEME-1 sites sorted by position p-value
+--------------------------------------------------------------------------------
+Sequence name            Strand  Start   P-value                                   Site                     
+-------------            ------  ----- ---------            --------------------------------------------------
+hg19_knownGene_uc003usx.     -    656  3.72e-28 CTAACGTGAG GCCCGGCGCGGTGGCTCACGCCTGTAATCCCAGCACTTTGGGAGACCGAG GCGGGCGGAT
+hg19_knownGene_uc003usw.     -    656  3.72e-28 CTAACGTGAG GCCCGGCGCGGTGGCTCACGCCTGTAATCCCAGCACTTTGGGAGACCGAG GCGGGCGGAT
+hg19_knownGene_uc021vdr.     -    171  1.49e-26 GCAAACTGTG GCTGGGCGCGGTGGCTCACGCCTGTAATCCCAGCACTTTGGGAGGCCAAG GCAGGAGGAT
+hg19_knownGene_uc003xql.     +    196  8.73e-26 CTTTCTCTTG GCCGGGCCCGGTGGCTCACGTCTGTAATCCCAGCACTTTGGGAGGCCGAG GCGGGGGGAT
+hg19_knownGene_uc010qyd.     -    729  1.33e-25 TGGAAGTAGG GCCAGGCGCAGTGGCTCACACCTCTAATCCCAGCACTTTGGGAGGCCCAG GCAGGTGGAT
+hg19_knownGene_uc009yej.     -    729  1.33e-25 TGGAAGTAGG GCCAGGCGCAGTGGCTCACACCTCTAATCCCAGCACTTTGGGAGGCCCAG GCAGGTGGAT
+hg19_knownGene_uc002nsn.     -     84  2.62e-25 TCCAGTTGAG GCCGGGCGCGGTGGCTCACGCCTTTAATCCCAGCATTGTGGGAGGCCGAG ACGGCTGATC
+hg19_knownGene_uc003wfb.     +     86  3.00e-25 CAGGGCCCGG GTCGGCGGCGGTGGCTCACGCCTGTAATCCCAGCACTTTGGGAGGCCGAG GCGGGCGGAT
+hg19_knownGene_uc001lyw.     -     87  2.39e-21 AGAAAAAGTA GGCCAGCGCGGTGCTTCACTCCTGTAATCCCAGCACTATGGGAGGCCAAG GCGGGCAGAT
+hg19_knownGene_uc002wlp.     +     32  2.70e-18 ACAAAAATTA GCCGGGGGTGGTGGTAGGCACCTGTAATCCCAGATACTCGGGAGGCTGAG GCAGGAGACT
+hg19_knownGene_uc031rzi.     +    400  1.19e-16 GGGCCTGGAG GCCCGGGGCGGAAGAAAGGGGTCCACAATACTGCACGGTTAGAGGCCGAG CCAAGGCTGG
+hg19_knownGene_uc003csh.     +    400  1.19e-16 GGGCCTGGAG GCCCGGGGCGGAAGAAAGGGGTCCACAATACTGCACGGTTAGAGGCCGAG CCAAGGCTGG
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif GCCSGGSGCGGTGGCTCACGCCTSTAATCCCAGCACTTTGGGAGGCCGAG MEME-1 block diagrams
+--------------------------------------------------------------------------------
+SEQUENCE NAME            POSITION P-VALUE  MOTIF DIAGRAM
+-------------            ----------------  -------------
+hg19_knownGene_uc003usx.          3.7e-28  655_[-1]_295
+hg19_knownGene_uc003usw.          3.7e-28  655_[-1]_295
+hg19_knownGene_uc021vdr.          1.5e-26  170_[-1]_780
+hg19_knownGene_uc003xql.          8.7e-26  195_[+1]_755
+hg19_knownGene_uc010qyd.          1.3e-25  728_[-1]_222
+hg19_knownGene_uc009yej.          1.3e-25  728_[-1]_222
+hg19_knownGene_uc002nsn.          2.6e-25  83_[-1]_867
+hg19_knownGene_uc003wfb.            3e-25  85_[+1]_865
+hg19_knownGene_uc001lyw.          2.4e-21  86_[-1]_864
+hg19_knownGene_uc002wlp.          2.7e-18  31_[+1]_919
+hg19_knownGene_uc031rzi.          1.2e-16  399_[+1]_551
+hg19_knownGene_uc003csh.          1.2e-16  399_[+1]_551
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif GCCSGGSGCGGTGGCTCACGCCTSTAATCCCAGCACTTTGGGAGGCCGAG MEME-1 in BLOCKS format
+--------------------------------------------------------------------------------
+BL   MOTIF GCCSGGSGCGGTGGCTCACGCCTSTAATCCCAGCACTTTGGGAGGCCGAG width=50 seqs=12
+hg19_knownGene_uc003usx. (  656) GCCCGGCGCGGTGGCTCACGCCTGTAATCCCAGCACTTTGGGAGACCGAG  1 
+hg19_knownGene_uc003usw. (  656) GCCCGGCGCGGTGGCTCACGCCTGTAATCCCAGCACTTTGGGAGACCGAG  1 
+hg19_knownGene_uc021vdr. (  171) GCTGGGCGCGGTGGCTCACGCCTGTAATCCCAGCACTTTGGGAGGCCAAG  1 
+hg19_knownGene_uc003xql. (  196) GCCGGGCCCGGTGGCTCACGTCTGTAATCCCAGCACTTTGGGAGGCCGAG  1 
+hg19_knownGene_uc010qyd. (  729) GCCAGGCGCAGTGGCTCACACCTCTAATCCCAGCACTTTGGGAGGCCCAG  1 
+hg19_knownGene_uc009yej. (  729) GCCAGGCGCAGTGGCTCACACCTCTAATCCCAGCACTTTGGGAGGCCCAG  1 
+hg19_knownGene_uc002nsn. (   84) GCCGGGCGCGGTGGCTCACGCCTTTAATCCCAGCATTGTGGGAGGCCGAG  1 
+hg19_knownGene_uc003wfb. (   86) GTCGGCGGCGGTGGCTCACGCCTGTAATCCCAGCACTTTGGGAGGCCGAG  1 
+hg19_knownGene_uc001lyw. (   87) GGCCAGCGCGGTGCTTCACTCCTGTAATCCCAGCACTATGGGAGGCCAAG  1 
+hg19_knownGene_uc002wlp. (   32) GCCGGGGGTGGTGGTAGGCACCTGTAATCCCAGATACTCGGGAGGCTGAG  1 
+hg19_knownGene_uc031rzi. (  400) GCCCGGGGCGGAAGAAAGGGGTCCACAATACTGCACGGTTAGAGGCCGAG  1 
+hg19_knownGene_uc003csh. (  400) GCCCGGGGCGGAAGAAAGGGGTCCACAATACTGCACGGTTAGAGGCCGAG  1 
+//
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif GCCSGGSGCGGTGGCTCACGCCTSTAATCCCAGCACTTTGGGAGGCCGAG MEME-1 position-specific scoring matrix
+--------------------------------------------------------------------------------
+log-odds matrix: alength= 4 w= 50 n= 22824 bayes= 10.5513 E= 3.5e-109 
+ -1023  -1023    179  -1023 
+ -1023    152   -180   -133 
+ -1023    166  -1023   -133 
+   -33     52     52  -1023 
+  -133  -1023    166  -1023 
+ -1023   -180    166  -1023 
+ -1023    120     20  -1023 
+ -1023   -180    166  -1023 
+ -1023    166  -1023   -133 
+   -33  -1023    152  -1023 
+ -1023  -1023    179  -1023 
+   -33  -1023  -1023    199 
+   -33  -1023    152  -1023 
+ -1023   -180    166  -1023 
+   -33    120  -1023    -33 
+    25  -1023  -1023    184 
+   -33    137   -180  -1023 
+   184  -1023    -21  -1023 
+ -1023    152    -80  -1023 
+    25  -1023    120   -133 
+ -1023    137    -80   -133 
+ -1023    152  -1023    -33 
+ -1023    -80  -1023    199 
+ -1023     20    101   -133 
+   -33  -1023  -1023    199 
+   199    -80  -1023  -1023 
+   225  -1023  -1023  -1023 
+   -33  -1023  -1023    199 
+ -1023    152  -1023    -33 
+   -33    152  -1023  -1023 
+ -1023    179  -1023  -1023 
+   199  -1023  -1023    -33 
+ -1023  -1023    179  -1023 
+  -133    166  -1023  -1023 
+   213  -1023  -1023   -133 
+  -133    152  -1023   -133 
+ -1023   -180    -80    184 
+  -133  -1023    -21    167 
+ -1023   -180  -1023    213 
+ -1023  -1023    152    -33 
+   -33  -1023    152  -1023 
+ -1023  -1023    179  -1023 
+   225  -1023  -1023  -1023 
+ -1023  -1023    179  -1023 
+   -33  -1023    152  -1023 
+ -1023    179  -1023  -1023 
+ -1023    166  -1023   -133 
+   -33    -80    120  -1023 
+   225  -1023  -1023  -1023 
+ -1023  -1023    179  -1023 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif GCCSGGSGCGGTGGCTCACGCCTSTAATCCCAGCACTTTGGGAGGCCGAG MEME-1 position-specific probability matrix
+--------------------------------------------------------------------------------
+letter-probability matrix: alength= 4 w= 50 nsites= 12 E= 3.5e-109 
+ 0.000000  0.000000  1.000000  0.000000 
+ 0.000000  0.833333  0.083333  0.083333 
+ 0.000000  0.916667  0.000000  0.083333 
+ 0.166667  0.416667  0.416667  0.000000 
+ 0.083333  0.000000  0.916667  0.000000 
+ 0.000000  0.083333  0.916667  0.000000 
+ 0.000000  0.666667  0.333333  0.000000 
+ 0.000000  0.083333  0.916667  0.000000 
+ 0.000000  0.916667  0.000000  0.083333 
+ 0.166667  0.000000  0.833333  0.000000 
+ 0.000000  0.000000  1.000000  0.000000 
+ 0.166667  0.000000  0.000000  0.833333 
+ 0.166667  0.000000  0.833333  0.000000 
+ 0.000000  0.083333  0.916667  0.000000 
+ 0.166667  0.666667  0.000000  0.166667 
+ 0.250000  0.000000  0.000000  0.750000 
+ 0.166667  0.750000  0.083333  0.000000 
+ 0.750000  0.000000  0.250000  0.000000 
+ 0.000000  0.833333  0.166667  0.000000 
+ 0.250000  0.000000  0.666667  0.083333 
+ 0.000000  0.750000  0.166667  0.083333 
+ 0.000000  0.833333  0.000000  0.166667 
+ 0.000000  0.166667  0.000000  0.833333 
+ 0.000000  0.333333  0.583333  0.083333 
+ 0.166667  0.000000  0.000000  0.833333 
+ 0.833333  0.166667  0.000000  0.000000 
+ 1.000000  0.000000  0.000000  0.000000 
+ 0.166667  0.000000  0.000000  0.833333 
+ 0.000000  0.833333  0.000000  0.166667 
+ 0.166667  0.833333  0.000000  0.000000 
+ 0.000000  1.000000  0.000000  0.000000 
+ 0.833333  0.000000  0.000000  0.166667 
+ 0.000000  0.000000  1.000000  0.000000 
+ 0.083333  0.916667  0.000000  0.000000 
+ 0.916667  0.000000  0.000000  0.083333 
+ 0.083333  0.833333  0.000000  0.083333 
+ 0.000000  0.083333  0.166667  0.750000 
+ 0.083333  0.000000  0.250000  0.666667 
+ 0.000000  0.083333  0.000000  0.916667 
+ 0.000000  0.000000  0.833333  0.166667 
+ 0.166667  0.000000  0.833333  0.000000 
+ 0.000000  0.000000  1.000000  0.000000 
+ 1.000000  0.000000  0.000000  0.000000 
+ 0.000000  0.000000  1.000000  0.000000 
+ 0.166667  0.000000  0.833333  0.000000 
+ 0.000000  1.000000  0.000000  0.000000 
+ 0.000000  0.916667  0.000000  0.083333 
+ 0.166667  0.166667  0.666667  0.000000 
+ 1.000000  0.000000  0.000000  0.000000 
+ 0.000000  0.000000  1.000000  0.000000 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif GCCSGGSGCGGTGGCTCACGCCTSTAATCCCAGCACTTTGGGAGGCCGAG MEME-1 regular expression
+--------------------------------------------------------------------------------
+GCC[CG]GG[CG]GCGGTGGC[TA]C[AG]C[GA]CCT[GC]TAATCCCAGCACT[TG]TGGGAGGCCGAG
+--------------------------------------------------------------------------------
+
+
+
+
+Time 49.92 secs.
+
+********************************************************************************
+
+
+********************************************************************************
+MOTIF TTTTTBTATTTTTWGTWGAGAYGGGGTTTSWCYATGTTGSYCAGGMTGRT MEME-2	width =  50  sites =  12  llr = 497  E-value = 1.2e-078
+********************************************************************************
+--------------------------------------------------------------------------------
+	Motif TTTTTBTATTTTTWGTWGAGAYGGGGTTTSWCYATGTTGSYCAGGMTGRT MEME-2 Description
+--------------------------------------------------------------------------------
+Simplified        A  1::2:::8::31:5::738281::3:::::4:17:2::2:::8::31:41
+pos.-specific     C  :11:1312:::1:1:3:2:::3::::13152852::11:47a:3:7:1:1
+probability       G  :::124:::::::181:6173:8a6911:42:2:18::75:::88:2852
+matrix            T  99988391aa88a3273:22:63:21879133329:99213:3:2:8117
+
+         bits    2.3         **  *                                     
+                 2.0         **  *                                     
+                 1.8 ***   * **  *          *    *     * **   *        
+                 1.6 ***   * **  *          *    *     * **   *        
+Relative         1.4 ***   * *****   *   *  * ** *     * **   **       
+Entropy          1.1 ***** ******* * * * * ** ** *  *  ****  *** ***   
+(59.8 bits)      0.9 ***** ******* *** * **** ****  * *****  ********  
+                 0.7 ***** ******* *** ***********  * ****** **********
+                 0.5 ****************************** * *****************
+                 0.2 **************************************************
+                 0.0 --------------------------------------------------
+
+Multilevel           TTTTTGTATTTTTAGTAGAGATGGGGTTTCACCATGTTGGCCAGGCTGGT
+consensus                 C    A  T CTA  GCT A  C GTTT      CT TC A  A 
+sequence                  T                                            
+                                                                       
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif TTTTTBTATTTTTWGTWGAGAYGGGGTTTSWCYATGTTGSYCAGGMTGRT MEME-2 sites sorted by position p-value
+--------------------------------------------------------------------------------
+Sequence name            Strand  Start   P-value                                   Site                     
+-------------            ------  ----- ---------            --------------------------------------------------
+hg19_knownGene_uc003xql.     -    276  3.73e-30 CCGGCTAATT TTTTTGTATTTTTAGTAGAGATGGGGTTTCACCATGTTGGTCAGGCTGGT CTCGAACTCC
+hg19_knownGene_uc010qyd.     +    647  4.44e-28 ACCCAGCTAA TTTTTGTATTTTTAGTACAGATGGGGTTTGTCCATGTTGGCCAGGCTGGT CTCGAACTCC
+hg19_knownGene_uc009yej.     +    647  4.44e-28 ACCCAGCTAA TTTTTGTATTTTTAGTACAGATGGGGTTTGTCCATGTTGGCCAGGCTGGT CTCGAACTCC
+hg19_knownGene_uc003usx.     +    574  3.11e-27 GTTTTTTTTT TTTTTGTATTTTTAGTAGAGGCGGAGTTTCACCATGTTGGCCAGGCTGAT TTCGAACTCC
+hg19_knownGene_uc003usw.     +    574  3.11e-27 GTTTTTTTTT TTTTTGTATTTTTAGTAGAGGCGGAGTTTCACCATGTTGGCCAGGCTGAT TTCGAACTCC
+hg19_knownGene_uc001lyw.     +    140  6.99e-25 GCTGGCCTAC TTTTTCTATTTTTTGTAGAAATGGGGTCTCACTATGTTGCCCAGGCTTAT CTCAACACCT
+hg19_knownGene_uc021vdr.     +     89  7.13e-18 ACTTTTTTTC TTCTCTTTTTAATGGCAGAGGCGGGGTCTCACTATGTTGCCCAGGATGGT CTCCAGCTCC
+hg19_knownGene_uc031rzi.     +    108  1.63e-15 TTATGTAAAC TTTAGCTATTATTTGCTATTATTGTGTTTGCTGTTATTTCTCTCTAGGAG CTCCCAGGGG
+hg19_knownGene_uc003csh.     +    108  1.63e-15 TTATGTAAAC TTTAGCTATTATTTGCTATTATTGTGTTTGCTGTTATTTCTCTCTAGGAG CTCCCAGGGG
+hg19_knownGene_uc003wfb.     -    159  1.81e-15 CGCCCGGCTA ATTTTCTATTTTTAGTAGAGACGGGTCTTGGTCAGGCTGGTCTCGAACTC CCGACTTCTG
+hg19_knownGene_uc002nsn.     +      8  2.57e-15    AAGGCTT TTTGTTTCTTTTTCTGTAGAAATGGGGGTCTCACTGTTACCCAGGCTGGT CTCGAACACC
+hg19_knownGene_uc002wlp.     -    145  5.10e-15 TTTTTTCTTT TCTTTTCCTTTCTTTTTGAGATGGAGTCCTGCTCTGTCATCCAGGCTGGA GTACAGTGGC
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif TTTTTBTATTTTTWGTWGAGAYGGGGTTTSWCYATGTTGSYCAGGMTGRT MEME-2 block diagrams
+--------------------------------------------------------------------------------
+SEQUENCE NAME            POSITION P-VALUE  MOTIF DIAGRAM
+-------------            ----------------  -------------
+hg19_knownGene_uc003xql.          3.7e-30  275_[-2]_675
+hg19_knownGene_uc010qyd.          4.4e-28  646_[+2]_304
+hg19_knownGene_uc009yej.          4.4e-28  646_[+2]_304
+hg19_knownGene_uc003usx.          3.1e-27  573_[+2]_377
+hg19_knownGene_uc003usw.          3.1e-27  573_[+2]_377
+hg19_knownGene_uc001lyw.            7e-25  139_[+2]_811
+hg19_knownGene_uc021vdr.          7.1e-18  88_[+2]_862
+hg19_knownGene_uc031rzi.          1.6e-15  107_[+2]_843
+hg19_knownGene_uc003csh.          1.6e-15  107_[+2]_843
+hg19_knownGene_uc003wfb.          1.8e-15  158_[-2]_792
+hg19_knownGene_uc002nsn.          2.6e-15  7_[+2]_943
+hg19_knownGene_uc002wlp.          5.1e-15  144_[-2]_806
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif TTTTTBTATTTTTWGTWGAGAYGGGGTTTSWCYATGTTGSYCAGGMTGRT MEME-2 in BLOCKS format
+--------------------------------------------------------------------------------
+BL   MOTIF TTTTTBTATTTTTWGTWGAGAYGGGGTTTSWCYATGTTGSYCAGGMTGRT width=50 seqs=12
+hg19_knownGene_uc003xql. (  276) TTTTTGTATTTTTAGTAGAGATGGGGTTTCACCATGTTGGTCAGGCTGGT  1 
+hg19_knownGene_uc010qyd. (  647) TTTTTGTATTTTTAGTACAGATGGGGTTTGTCCATGTTGGCCAGGCTGGT  1 
+hg19_knownGene_uc009yej. (  647) TTTTTGTATTTTTAGTACAGATGGGGTTTGTCCATGTTGGCCAGGCTGGT  1 
+hg19_knownGene_uc003usx. (  574) TTTTTGTATTTTTAGTAGAGGCGGAGTTTCACCATGTTGGCCAGGCTGAT  1 
+hg19_knownGene_uc003usw. (  574) TTTTTGTATTTTTAGTAGAGGCGGAGTTTCACCATGTTGGCCAGGCTGAT  1 
+hg19_knownGene_uc001lyw. (  140) TTTTTCTATTTTTTGTAGAAATGGGGTCTCACTATGTTGCCCAGGCTTAT  1 
+hg19_knownGene_uc021vdr. (   89) TTCTCTTTTTAATGGCAGAGGCGGGGTCTCACTATGTTGCCCAGGATGGT  1 
+hg19_knownGene_uc031rzi. (  108) TTTAGCTATTATTTGCTATTATTGTGTTTGCTGTTATTTCTCTCTAGGAG  1 
+hg19_knownGene_uc003csh. (  108) TTTAGCTATTATTTGCTATTATTGTGTTTGCTGTTATTTCTCTCTAGGAG  1 
+hg19_knownGene_uc003wfb. (  159) ATTTTCTATTTTTAGTAGAGACGGGTCTTGGTCAGGCTGGTCTCGAACTC  1 
+hg19_knownGene_uc002nsn. (    8) TTTGTTTCTTTTTCTGTAGAAATGGGGGTCTCACTGTTACCCAGGCTGGT  1 
+hg19_knownGene_uc002wlp. (  145) TCTTTTCCTTTCTTTTTGAGATGGAGTCCTGCTCTGTCATCCAGGCTGGA  1 
+//
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif TTTTTBTATTTTTWGTWGAGAYGGGGTTTSWCYATGTTGSYCAGGMTGRT MEME-2 position-specific scoring matrix
+--------------------------------------------------------------------------------
+log-odds matrix: alength= 4 w= 50 n= 22824 bayes= 11.9925 E= 1.2e-078 
+  -133  -1023  -1023    213 
+ -1023   -180  -1023    213 
+ -1023   -180  -1023    213 
+   -33  -1023   -180    184 
+ -1023   -180    -80    184 
+ -1023     20     52     25 
+ -1023   -180  -1023    213 
+   184    -80  -1023   -133 
+ -1023  -1023  -1023    225 
+ -1023  -1023  -1023    225 
+    25  -1023  -1023    184 
+  -133   -180  -1023    199 
+ -1023  -1023  -1023    225 
+   125   -180   -180     67 
+ -1023  -1023    152    -33 
+ -1023    -21   -180    167 
+   167  -1023  -1023     67 
+    25    -80    101  -1023 
+   184  -1023   -180    -33 
+   -33  -1023    120    -33 
+   184  -1023    -21  -1023 
+  -133     20  -1023    147 
+ -1023  -1023    137     25 
+ -1023  -1023    179  -1023 
+    25  -1023    101    -33 
+ -1023  -1023    166   -133 
+ -1023   -180   -180    199 
+ -1023    -21   -180    167 
+ -1023   -180  -1023    213 
+ -1023     79     52   -133 
+    99    -80    -80     25 
+ -1023    137  -1023     25 
+  -133     79    -80     25 
+   167    -80  -1023    -33 
+ -1023  -1023   -180    213 
+   -33  -1023    152  -1023 
+ -1023   -180  -1023    213 
+ -1023   -180  -1023    213 
+   -33  -1023    120    -33 
+ -1023     52     79   -133 
+ -1023    120  -1023     67 
+ -1023    179  -1023  -1023 
+   184  -1023  -1023     25 
+ -1023    -21    137  -1023 
+ -1023  -1023    152    -33 
+    67    120  -1023  -1023 
+  -133  -1023    -80    184 
+ -1023   -180    152   -133 
+    99  -1023     79   -133 
+  -133   -180    -80    167 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif TTTTTBTATTTTTWGTWGAGAYGGGGTTTSWCYATGTTGSYCAGGMTGRT MEME-2 position-specific probability matrix
+--------------------------------------------------------------------------------
+letter-probability matrix: alength= 4 w= 50 nsites= 12 E= 1.2e-078 
+ 0.083333  0.000000  0.000000  0.916667 
+ 0.000000  0.083333  0.000000  0.916667 
+ 0.000000  0.083333  0.000000  0.916667 
+ 0.166667  0.000000  0.083333  0.750000 
+ 0.000000  0.083333  0.166667  0.750000 
+ 0.000000  0.333333  0.416667  0.250000 
+ 0.000000  0.083333  0.000000  0.916667 
+ 0.750000  0.166667  0.000000  0.083333 
+ 0.000000  0.000000  0.000000  1.000000 
+ 0.000000  0.000000  0.000000  1.000000 
+ 0.250000  0.000000  0.000000  0.750000 
+ 0.083333  0.083333  0.000000  0.833333 
+ 0.000000  0.000000  0.000000  1.000000 
+ 0.500000  0.083333  0.083333  0.333333 
+ 0.000000  0.000000  0.833333  0.166667 
+ 0.000000  0.250000  0.083333  0.666667 
+ 0.666667  0.000000  0.000000  0.333333 
+ 0.250000  0.166667  0.583333  0.000000 
+ 0.750000  0.000000  0.083333  0.166667 
+ 0.166667  0.000000  0.666667  0.166667 
+ 0.750000  0.000000  0.250000  0.000000 
+ 0.083333  0.333333  0.000000  0.583333 
+ 0.000000  0.000000  0.750000  0.250000 
+ 0.000000  0.000000  1.000000  0.000000 
+ 0.250000  0.000000  0.583333  0.166667 
+ 0.000000  0.000000  0.916667  0.083333 
+ 0.000000  0.083333  0.083333  0.833333 
+ 0.000000  0.250000  0.083333  0.666667 
+ 0.000000  0.083333  0.000000  0.916667 
+ 0.000000  0.500000  0.416667  0.083333 
+ 0.416667  0.166667  0.166667  0.250000 
+ 0.000000  0.750000  0.000000  0.250000 
+ 0.083333  0.500000  0.166667  0.250000 
+ 0.666667  0.166667  0.000000  0.166667 
+ 0.000000  0.000000  0.083333  0.916667 
+ 0.166667  0.000000  0.833333  0.000000 
+ 0.000000  0.083333  0.000000  0.916667 
+ 0.000000  0.083333  0.000000  0.916667 
+ 0.166667  0.000000  0.666667  0.166667 
+ 0.000000  0.416667  0.500000  0.083333 
+ 0.000000  0.666667  0.000000  0.333333 
+ 0.000000  1.000000  0.000000  0.000000 
+ 0.750000  0.000000  0.000000  0.250000 
+ 0.000000  0.250000  0.750000  0.000000 
+ 0.000000  0.000000  0.833333  0.166667 
+ 0.333333  0.666667  0.000000  0.000000 
+ 0.083333  0.000000  0.166667  0.750000 
+ 0.000000  0.083333  0.833333  0.083333 
+ 0.416667  0.000000  0.500000  0.083333 
+ 0.083333  0.083333  0.166667  0.666667 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif TTTTTBTATTTTTWGTWGAGAYGGGGTTTSWCYATGTTGSYCAGGMTGRT MEME-2 regular expression
+--------------------------------------------------------------------------------
+TTTTT[GCT]TATT[TA]TT[AT]G[TC][AT][GA]AG[AG][TC][GT]G[GA]GT[TC]T[CG][AT][CT][CT]ATGTTG[GC][CT]C[AT][GC]G[CA]TG[GA]T
+--------------------------------------------------------------------------------
+
+
+
+
+Time 98.75 secs.
+
+********************************************************************************
+
+
+********************************************************************************
+MOTIF WTCTYGGCTCWCTGCAACCTCYGCCTYYYKGRTTCAAGCDATTCTCMWGC MEME-3	width =  50  sites =  11  llr = 471  E-value = 1.0e-071
+********************************************************************************
+--------------------------------------------------------------------------------
+	Motif WTCTYGGCTCWCTGCAACCTCYGCCTYYYKGRTTCAAGCDATTCTCMWGC MEME-3 Description
+--------------------------------------------------------------------------------
+Simplified        A  6112:112::6::::67::1:::::31:12:5:::67:147::1::54::
+pos.-specific     C  ::6:5:1827:81:813892a427a:555::::3a32:7:3:19:85:28
+probability       G  :::::67::1:::9:::21:::8::::::595:::::a14:1:::2::8:
+matrix            T  4938531:82429123:::7:6:3:745531:a7:11:13:99:a::6:2
+
+         bits    2.3                                 *           *     
+                 2.0                                 *           *     
+                 1.8  *          *       *   *       * *  *   ** *     
+                 1.6  * *    *   *       *   *       * *  *   ** *     
+Relative         1.4 ** *    * * **  * * *   **    * ***  *  *****  *  
+Entropy          1.1 ** **  ** ***** ********** *  * *** **  ****** ***
+(61.8 bits)      0.9 ** **  ** **************** *  ********  **********
+                 0.7 ***************************** ********* **********
+                 0.5 **************************************************
+                 0.2 **************************************************
+                 0.0 --------------------------------------------------
+
+Multilevel           ATCTTGGCTCACTGCAACCTCTGCCTCTCGGGTTCAAGCAATTCTCCTGC
+consensus            T T CT    T    TC    C T ATCTT A C C   GC     AA  
+sequence                                                    T          
+                                                                       
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif WTCTYGGCTCWCTGCAACCTCYGCCTYYYKGRTTCAAGCDATTCTCMWGC MEME-3 sites sorted by position p-value
+--------------------------------------------------------------------------------
+Sequence name            Strand  Start   P-value                                   Site                     
+-------------            ------  ----- ---------            --------------------------------------------------
+hg19_knownGene_uc003usx.     +    461  4.36e-28 CGGTGTCCGG ATCTCGGCTCACTGCAACCTCTGCCTCTTGGATTCAAGCGATTCTCAAGC CTCAGCTTCC
+hg19_knownGene_uc003usw.     +    461  4.36e-28 CGGTGTCCGG ATCTCGGCTCACTGCAACCTCTGCCTCTTGGATTCAAGCGATTCTCAAGC CTCAGCTTCC
+hg19_knownGene_uc010qyd.     +    544  1.79e-26 CAGTGGCACG ATTTTGGCTTACTGCAACCTCTGCCTCCCGGGTTCAAGCAATTCTCCTGC CTCAGCCTCC
+hg19_knownGene_uc009yej.     +    544  1.79e-26 CAGTGGCACG ATTTTGGCTTACTGCAACCTCTGCCTCCCGGGTTCAAGCAATTCTCCTGC CTCAGCCTCC
+hg19_knownGene_uc003xql.     -    381  2.19e-26 AAGTGGCGCG ATCTCGGCTCACTGCAACCTCCGCCTCCCGGGTTCAAGCTATTCTCCTGC CTCAGCCCCC
+hg19_knownGene_uc003wfb.     -    260  7.01e-23 CAATGGCGCG ATCTCGACTCACCGCAACCTCCGCCTTCCGGGTTCAAGCGATTCTCATGC CTCAGCCTCC
+hg19_knownGene_uc002wlp.     -     82  7.38e-21 CAGTGGCGCG ATCTCAGCTCATTGCAACCTCCGCCTCCCAGGTTCAAGTGAGTCTCCTGC CTCAGCCTCC
+hg19_knownGene_uc031rzi.     +    666  1.43e-16 GCTGGGAGTT TTCATTGACCTCTGCTCCCCCTCTCATTTTGATCCCCGCTCTTCTGCTCT GGGCTCCGCC
+hg19_knownGene_uc003csh.     +    666  1.43e-16 GCTGGGAGTT TTCATTGACCTCTGCTCCCCCTCTCATTTTGATCCCCGCTCTTCTGCTCT GGGCTCCGCC
+hg19_knownGene_uc001uuz.     -    841  3.16e-16 ACTGCTTTAT TTATTTTCTCTTTGTTCGCACCGTCTATTATATTCTAGAAATTATCAAGC GGAATTGAAA
+hg19_knownGene_uc021qkj.     +    587  8.42e-15 TTAGCTGGTG TATTTGCCTGTCTTTCAGGTCTGCCATTATGGTCCCTGGACTCCTCAAGC CAGGCCAAGC
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif WTCTYGGCTCWCTGCAACCTCYGCCTYYYKGRTTCAAGCDATTCTCMWGC MEME-3 block diagrams
+--------------------------------------------------------------------------------
+SEQUENCE NAME            POSITION P-VALUE  MOTIF DIAGRAM
+-------------            ----------------  -------------
+hg19_knownGene_uc003usx.          4.4e-28  460_[+3]_490
+hg19_knownGene_uc003usw.          4.4e-28  460_[+3]_490
+hg19_knownGene_uc010qyd.          1.8e-26  543_[+3]_407
+hg19_knownGene_uc009yej.          1.8e-26  543_[+3]_407
+hg19_knownGene_uc003xql.          2.2e-26  380_[-3]_570
+hg19_knownGene_uc003wfb.            7e-23  259_[-3]_691
+hg19_knownGene_uc002wlp.          7.4e-21  81_[-3]_869
+hg19_knownGene_uc031rzi.          1.4e-16  665_[+3]_285
+hg19_knownGene_uc003csh.          1.4e-16  665_[+3]_285
+hg19_knownGene_uc001uuz.          3.2e-16  840_[-3]_110
+hg19_knownGene_uc021qkj.          8.4e-15  586_[+3]_364
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif WTCTYGGCTCWCTGCAACCTCYGCCTYYYKGRTTCAAGCDATTCTCMWGC MEME-3 in BLOCKS format
+--------------------------------------------------------------------------------
+BL   MOTIF WTCTYGGCTCWCTGCAACCTCYGCCTYYYKGRTTCAAGCDATTCTCMWGC width=50 seqs=11
+hg19_knownGene_uc003usx. (  461) ATCTCGGCTCACTGCAACCTCTGCCTCTTGGATTCAAGCGATTCTCAAGC  1 
+hg19_knownGene_uc003usw. (  461) ATCTCGGCTCACTGCAACCTCTGCCTCTTGGATTCAAGCGATTCTCAAGC  1 
+hg19_knownGene_uc010qyd. (  544) ATTTTGGCTTACTGCAACCTCTGCCTCCCGGGTTCAAGCAATTCTCCTGC  1 
+hg19_knownGene_uc009yej. (  544) ATTTTGGCTTACTGCAACCTCTGCCTCCCGGGTTCAAGCAATTCTCCTGC  1 
+hg19_knownGene_uc003xql. (  381) ATCTCGGCTCACTGCAACCTCCGCCTCCCGGGTTCAAGCTATTCTCCTGC  1 
+hg19_knownGene_uc003wfb. (  260) ATCTCGACTCACCGCAACCTCCGCCTTCCGGGTTCAAGCGATTCTCATGC  1 
+hg19_knownGene_uc002wlp. (   82) ATCTCAGCTCATTGCAACCTCCGCCTCCCAGGTTCAAGTGAGTCTCCTGC  1 
+hg19_knownGene_uc031rzi. (  666) TTCATTGACCTCTGCTCCCCCTCTCATTTTGATCCCCGCTCTTCTGCTCT  1 
+hg19_knownGene_uc003csh. (  666) TTCATTGACCTCTGCTCCCCCTCTCATTTTGATCCCCGCTCTTCTGCTCT  1 
+hg19_knownGene_uc001uuz. (  841) TTATTTTCTCTTTGTTCGCACCGTCTATTATATTCTAGAAATTATCAAGC  1 
+hg19_knownGene_uc021qkj. (  587) TATTTGCCTGTCTTTCAGGTCTGCCATTATGGTCCCTGGACTCCTCAAGC  1 
+//
+
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif WTCTYGGCTCWCTGCAACCTCYGCCTYYYKGRTTCAAGCDATTCTCMWGC MEME-3 position-specific scoring matrix
+--------------------------------------------------------------------------------
+log-odds matrix: alength= 4 w= 50 n= 22824 bayes= 11.3734 E= 1.0e-071 
+   160  -1010  -1010     79 
+  -121  -1010  -1010    211 
+  -121    113  -1010     38 
+   -21  -1010  -1010    196 
+ -1010     65  -1010    138 
+  -121  -1010    113     38 
+  -121   -167    133   -121 
+   -21    150  -1010  -1010 
+ -1010    -67  -1010    196 
+ -1010    133   -167    -21 
+   160  -1010  -1010     79 
+ -1010    150  -1010    -21 
+ -1010   -167  -1010    211 
+ -1010  -1010    165   -121 
+ -1010    150  -1010    -21 
+   160   -167  -1010     38 
+   179     -9  -1010  -1010 
+ -1010    150    -67  -1010 
+ -1010    165   -167  -1010 
+  -121    -67  -1010    179 
+ -1010    178  -1010  -1010 
+ -1010     33  -1010    160 
+ -1010    -67    150  -1010 
+ -1010    133  -1010     38 
+ -1010    178  -1010  -1010 
+    38  -1010  -1010    179 
+  -121     91  -1010     79 
+ -1010     65  -1010    138 
+  -121     65  -1010    111 
+   -21  -1010     91     38 
+ -1010  -1010    165   -121 
+   111  -1010     91  -1010 
+ -1010  -1010  -1010    225 
+ -1010     -9  -1010    179 
+ -1010    178  -1010  -1010 
+   160     -9  -1010   -121 
+   179    -67  -1010   -121 
+ -1010  -1010    178  -1010 
+  -121    133   -167   -121 
+    79  -1010     33     38 
+   179     -9  -1010  -1010 
+ -1010  -1010   -167    211 
+ -1010   -167  -1010    211 
+  -121    165  -1010  -1010 
+ -1010  -1010  -1010    225 
+ -1010    150    -67  -1010 
+   111     91  -1010  -1010 
+    79  -1010  -1010    160 
+ -1010    -67    150  -1010 
+ -1010    150  -1010    -21 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif WTCTYGGCTCWCTGCAACCTCYGCCTYYYKGRTTCAAGCDATTCTCMWGC MEME-3 position-specific probability matrix
+--------------------------------------------------------------------------------
+letter-probability matrix: alength= 4 w= 50 nsites= 11 E= 1.0e-071 
+ 0.636364  0.000000  0.000000  0.363636 
+ 0.090909  0.000000  0.000000  0.909091 
+ 0.090909  0.636364  0.000000  0.272727 
+ 0.181818  0.000000  0.000000  0.818182 
+ 0.000000  0.454545  0.000000  0.545455 
+ 0.090909  0.000000  0.636364  0.272727 
+ 0.090909  0.090909  0.727273  0.090909 
+ 0.181818  0.818182  0.000000  0.000000 
+ 0.000000  0.181818  0.000000  0.818182 
+ 0.000000  0.727273  0.090909  0.181818 
+ 0.636364  0.000000  0.000000  0.363636 
+ 0.000000  0.818182  0.000000  0.181818 
+ 0.000000  0.090909  0.000000  0.909091 
+ 0.000000  0.000000  0.909091  0.090909 
+ 0.000000  0.818182  0.000000  0.181818 
+ 0.636364  0.090909  0.000000  0.272727 
+ 0.727273  0.272727  0.000000  0.000000 
+ 0.000000  0.818182  0.181818  0.000000 
+ 0.000000  0.909091  0.090909  0.000000 
+ 0.090909  0.181818  0.000000  0.727273 
+ 0.000000  1.000000  0.000000  0.000000 
+ 0.000000  0.363636  0.000000  0.636364 
+ 0.000000  0.181818  0.818182  0.000000 
+ 0.000000  0.727273  0.000000  0.272727 
+ 0.000000  1.000000  0.000000  0.000000 
+ 0.272727  0.000000  0.000000  0.727273 
+ 0.090909  0.545455  0.000000  0.363636 
+ 0.000000  0.454545  0.000000  0.545455 
+ 0.090909  0.454545  0.000000  0.454545 
+ 0.181818  0.000000  0.545455  0.272727 
+ 0.000000  0.000000  0.909091  0.090909 
+ 0.454545  0.000000  0.545455  0.000000 
+ 0.000000  0.000000  0.000000  1.000000 
+ 0.000000  0.272727  0.000000  0.727273 
+ 0.000000  1.000000  0.000000  0.000000 
+ 0.636364  0.272727  0.000000  0.090909 
+ 0.727273  0.181818  0.000000  0.090909 
+ 0.000000  0.000000  1.000000  0.000000 
+ 0.090909  0.727273  0.090909  0.090909 
+ 0.363636  0.000000  0.363636  0.272727 
+ 0.727273  0.272727  0.000000  0.000000 
+ 0.000000  0.000000  0.090909  0.909091 
+ 0.000000  0.090909  0.000000  0.909091 
+ 0.090909  0.909091  0.000000  0.000000 
+ 0.000000  0.000000  0.000000  1.000000 
+ 0.000000  0.818182  0.181818  0.000000 
+ 0.454545  0.545455  0.000000  0.000000 
+ 0.363636  0.000000  0.000000  0.636364 
+ 0.000000  0.181818  0.818182  0.000000 
+ 0.000000  0.818182  0.000000  0.181818 
+--------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------
+	Motif WTCTYGGCTCWCTGCAACCTCYGCCTYYYKGRTTCAAGCDATTCTCMWGC MEME-3 regular expression
+--------------------------------------------------------------------------------
+[AT]T[CT]T[TC][GT]GCTC[AT]CTGC[AT][AC]CCTC[TC]G[CT]C[TA][CT][TC][CT][GT]G[GA]T[TC]C[AC]AGC[AGT][AC]TTCTC[CA][TA]GC
+--------------------------------------------------------------------------------
+
+
+
+
+Time 145.91 secs.
+
+********************************************************************************
+
+
+********************************************************************************
+SUMMARY OF MOTIFS
+********************************************************************************
+
+--------------------------------------------------------------------------------
+	Combined block diagrams: non-overlapping sites with p-value < 0.0001
+--------------------------------------------------------------------------------
+SEQUENCE NAME            COMBINED P-VALUE  MOTIF DIAGRAM
+-------------            ----------------  -------------
+hg19_knownGene_uc021vdr.         8.92e-35  88_[+2(7.13e-18)]_32_[-1(1.49e-26)]_\
+    271_[-1(1.73e-05)]_459
+hg19_knownGene_uc003csh.         7.00e-34  107_[+2(1.63e-15)]_242_\
+    [+1(1.19e-16)]_216_[+3(1.43e-16)]_285
+hg19_knownGene_uc003fqz.         1.86e-01  241_[+2(2.89e-05)]_588_\
+    [-2(3.65e-05)]_71
+hg19_knownGene_uc031rzi.         7.00e-34  107_[+2(1.63e-15)]_242_\
+    [+1(1.19e-16)]_216_[+3(1.43e-16)]_285
+hg19_knownGene_uc003gdi.         6.26e-01  1000
+hg19_knownGene_uc003gdl.         6.26e-01  1000
+hg19_knownGene_uc003hfx.         1.36e-01  268_[+3(8.20e-05)]_465_\
+    [-1(5.81e-05)]_167
+hg19_knownGene_uc003jkc.         1.93e-01  604_[+3(5.07e-05)]_346
+hg19_knownGene_uc003ldb.         5.09e-01  535_[-2(7.11e-05)]_415
+hg19_knownGene_uc003usv.         6.40e-01  1000
+hg19_knownGene_uc003usw.         4.76e-68  128_[-2(7.34e-05)]_282_\
+    [+3(4.36e-28)]_[-1(4.66e-14)]_13_[+2(3.11e-27)]_32_[-1(3.72e-28)]_295
+hg19_knownGene_uc003usx.         4.76e-68  128_[-2(7.34e-05)]_282_\
+    [+3(4.36e-28)]_[-1(4.66e-14)]_13_[+2(3.11e-27)]_32_[-1(3.72e-28)]_295
+hg19_knownGene_uc003wfb.         1.87e-48  85_[+1(3.00e-25)]_23_[-2(1.81e-15)]_\
+    1_[+1(1.90e-05)]_[-3(7.01e-23)]_13_[-2(1.49e-08)]_628
+hg19_knownGene_uc003xql.         6.51e-67  195_[+1(8.73e-26)]_30_\
+    [-2(3.73e-30)]_5_[+1(2.79e-16)]_[-3(2.19e-26)]_13_[-2(3.99e-14)]_507
+hg19_knownGene_uc001lyw.         2.03e-35  6_[+2(2.50e-13)]_30_[-1(2.39e-21)]_\
+    3_[+2(6.99e-25)]_811
+hg19_knownGene_uc001nsg.         3.67e-01  1000
+hg19_knownGene_uc009yej.         9.10e-65  261_[-2(7.81e-05)]_86_\
+    [-2(5.16e-06)]_33_[+2(5.58e-07)]_13_[+3(1.79e-26)]_[-1(3.52e-13)]_3_\
+    [+2(4.44e-28)]_32_[-1(1.33e-25)]_56_[-2(2.61e-05)]_116
+hg19_knownGene_uc010qyd.         9.10e-65  261_[-2(7.81e-05)]_86_\
+    [-2(5.16e-06)]_33_[+2(5.58e-07)]_13_[+3(1.79e-26)]_[-1(3.52e-13)]_3_\
+    [+2(4.44e-28)]_32_[-1(1.33e-25)]_56_[-2(2.61e-05)]_116
+hg19_knownGene_uc021qkj.         4.88e-11  369_[+1(5.33e-05)]_167_\
+    [+3(8.42e-15)]_210_[+2(3.59e-05)]_39_[+3(4.30e-05)]_15
+hg19_knownGene_uc001uuz.         1.31e-10  230_[+3(6.05e-05)]_560_\
+    [-3(3.16e-16)]_110
+hg19_knownGene_uc002nsn.         4.62e-30  7_[+2(2.57e-15)]_26_[-1(2.62e-25)]_\
+    812_[-1(6.60e-05)]_5
+hg19_knownGene_uc002nso.         6.38e-01  285_[-1(6.60e-05)]_665
+hg19_knownGene_uc002wlp.         3.37e-39  31_[+1(2.70e-18)]_[-3(7.38e-21)]_13_\
+    [-2(5.10e-15)]_385_[-2(5.87e-05)]_371
+hg19_knownGene_uc002wlq.         8.05e-01  1000
+--------------------------------------------------------------------------------
+
+********************************************************************************
+
+
+********************************************************************************
+Stopped because requested number of motifs (3) found.
+********************************************************************************
+
+CPU: noble-meme.grid.gs.washington.edu
+
+********************************************************************************

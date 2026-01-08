@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Lecture 3 — Python for Bioinformatics: MCQ Quiz</title>
+  <style>
+    :root {
+      --bg: #0b0c10;
+      --panel: #12131a;
+      --ink: #e9eef5;
+      --muted: #b8c1d1;
+      --accent: #6ea8fe;
+      --ok: #38c172;
+      --bad: #ff6b6b;
+      --warn: #ffb020;
+      --card: #171924;
+      --border: #2a2f3a;
+      --focus: #99c2ff;
+    }
+    * { box-sizing: border-box; }
+    html, body { margin: 0; height: 100%; background: var(--bg); color: var(--ink); font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji"; }
+    a { color: var(--accent); }
+
+    .wrap { max-width: 1000px; margin: 0 auto; padding: 24px; }
+    header { position: sticky; top: 0; z-index: 5; background: linear-gradient(180deg, rgba(11,12,16,.98) 0%, rgba(11,12,16,.92) 100%); backdrop-filter: blur(6px); border-bottom: 1px solid var(--border); }
+    header .wrap { display: flex; align-items: center; gap: 16px; padding-block: 14px; }
+    .title { font-weight: 700; letter-spacing: .3px; }
+    .subtitle { color: var(--muted); font-size: .95rem; }
+
+    .progress { margin-left: auto; display: flex; align-items: center; gap: 10px; font-variant-numeric: tabular-nums; }
+    .bar { width: 180px; height: 8px; background: #202432; border-radius: 999px; overflow: hidden; border: 1px solid var(--border); }
+    .bar>span { display: block; height: 100%; width: 0%; background: linear-gradient(90deg, var(--accent), #9ad0ff); transition: width .2s ease; }
+
+    .panel { background: var(--panel); border: 1px solid var(--border); border-radius: 16px; padding: 18px; box-shadow: 0 10px 30px rgba(0,0,0,.25); }
+    .controls { position: sticky; bottom: 0; z-index: 4; background: linear-gradient(180deg, rgba(11,12,16,0) 0%, rgba(11,12,16,1) 40% 100%); padding-top: 24px; }
+    .controls .panel { display: flex; gap: 12px; align-items: center; justify-content: space-between; }
+
+    button { appearance: none; border: 1px solid var(--border); background: var(--accent); color: #0b1220; font-weight: 700; padding: 12px 16px; border-radius: 12px; cursor: pointer; transition: transform .02s ease, filter .2s ease; }
+    button.secondary { background: #23283a; color: var(--ink); }
+    button.ghost { background: transparent; color: var(--ink); }
+    button:hover { filter: brightness(1.05); }
+    button:active { transform: translateY(1px); }
+
+    .grid { display: grid; grid-template-columns: 1fr; gap: 16px; }
+    @media (min-width: 900px) {
+      .grid { grid-template-columns: 1fr 1fr; }
+    }
+
+    .question { background: var(--card); border: 1px solid var(--border); border-radius: 16px; padding: 16px; }
+    .question h3 { margin: 0 0 10px; font-size: 1.05rem; }
+    .qid { font-weight: 700; color: var(--muted); margin-right: 6px; }
+    .choices { display: grid; gap: 8px; margin-top: 8px; }
+
+    .choice { display: flex; align-items: flex-start; gap: 10px; padding: 10px; border: 1px solid var(--border); border-radius: 12px; background: #121420; }
+    .choice:hover { border-color: #33405a; }
+
+    input[type="radio"] { appearance: none; width: 18px; height: 18px; border: 2px solid #5a6b86; border-radius: 999px; margin-top: 2px; position: relative; outline: none; }
+    input[type="radio"]:focus { box-shadow: 0 0 0 3px rgba(153, 194, 255, .35); border-color: var(--focus); }
+    input[type="radio"]:checked::after { content: ""; position: absolute; inset: 3px; border-radius: 999px; background: var(--accent); }
+
+    .feedback { margin-top: 10px; font-size: .95rem; display: none; padding: 10px; border-radius: 10px; }
+    .question.correct .feedback { display: block; background: rgba(56, 193, 114, .12); border: 1px solid rgba(56, 193, 114, .3); }
+    .question.incorrect .feedback { display: block; background: rgba(255, 107, 107, .12); border: 1px solid rgba(255, 107, 107, .3); }
+
+    .question.correct { border-color: rgba(56, 193, 114, .5); }
+    .question.incorrect { border-color: rgba(255, 107, 107, .5); }
+
+    .badge { display: inline-block; padding: 2px 8px; border-radius: 999px; font-size: .8rem; font-weight: 700; }
+    .badge.ok { background: rgba(56,193,114,.18); color: #9af2bf; border: 1px solid rgba(56,193,114,.45); }
+    .badge.bad { background: rgba(255,107,107,.18); color: #ffc1c1; border: 1px solid rgba(255,107,107,.45); }
+
+    .result { display: none; }
+    .result.visible { display: block; }
+    .result h2 { margin: 0 0 8px; font-size: 1.3rem; }
+    .result .scorebig { font-size: 2.2rem; font-weight: 800; letter-spacing: .5px; }
+
+    .hint { color: var(--muted); font-size: .95rem; }
+    .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap">
+      <div>
+        <div class="title">Lecture 3 — Python for Bioinformatics</div>
+        <div class="subtitle">Multiple-Choice Quiz (24 questions)</div>
+      </div>
+      <div class="progress" aria-live="polite">
+        <span class="hint">Answered:</span>
+        <div class="bar" aria-hidden="true"><span id="barFill"></span></div>
+        <div><span id="answeredCount">0</span>/<span id="totalCount">24</span></div>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section id="intro" class="panel" style="margin-bottom: 16px;">
+      <p>Choose one answer for each question. Click <strong>Check answers</strong> to see your score and explanations. You can <strong>Reset</strong> to try again.</p>
+      <p class="hint">Tip: you can navigate with Tab and arrow keys; labels are clickable.</p>
+    </section>
+
+    <form id="quizForm" novalidate>
+      <div class="grid" id="questions">
+        <!-- Questions will be injected here by JavaScript -->
+      </div>
+
+      <div class="controls">
+        <div class="panel">
+          <div>
+            <button type="submit" id="submitBtn">Check answers</button>
+            <button type="button" class="secondary" id="resetBtn">Reset</button>
+            <button type="button" class="ghost" id="printBtn">Print / Save PDF</button>
+          </div>
+          <div id="result" class="result" aria-live="polite"></div>
+        </div>
+      </div>
+    </form>
+  </main>
+
+  <template id="questionTmpl">
+    <div class="question" data-qid="">
+      <h3><span class="qid"></span><span class="qtext"></span></h3>
+      <div class="choices"></div>
+      <div class="feedback"></div>
+    </div>
+  </template>
+
+  <script>
+    const DATA = [
+      { id: 1, q: 'In <code>open(name, mode = \"r\", buffering = -1)</code>, the default <em>mode</em> if omitted is:', opts: ['<code>\'w\'</code>','<code>\'a\'</code>','<code>\'r\'</code>','<code>\'r+\'</code>'], correct: 2, expl: 'Default is <code>\'r\'</code> (read-only).' },
+      { id: 2, q: 'Which file mode <strong>always overwrites</strong> an existing file?', opts: ['<code>r</code>','<code>w</code>','<code>a</code>','<code>r+</code>'], correct: 1, expl: '<code>w</code> truncates the file and writes from the start.' },
+      { id: 3, q: 'When <code>open()</code> succeeds, the OS returns:', opts: ['A path string','A <strong>file handle / descriptor</strong>','A copy of the whole file in memory','Only a permission token (no handle)'], correct: 1, expl: 'You get a file handle/descriptor that authorizes operations on the file.' },
+      { id: 4, q: 'Why can <code>for line in f: print(line)</code> produce extra blank lines?', opts: ['Python inserts CRLF automatically','Windows line endings are doubled','Each line ends with <code>\n</code> and <code>print</code> adds another newline','<code>print</code> trims whitespace'], correct: 2, expl: 'The file lines include newlines already; <code>print</code> appends one more by default.' },
+      { id: 5, q: 'Without using <code>strip()</code>, how do you suppress the extra blank lines when printing?', opts: ['<code>print(line, end=\"\")</code>','<code>print(line, sep=\"\")</code>','<code>print(line[:-1])</code>','Not possible without <code>strip</code>'], correct: 0, expl: 'Override the trailing newline by setting <code>end</code> to an empty string.' },
+      { id: 6, q: 'What does <code>f.read()</code> return?', opts: ['An iterator over lines','A list of lines','The entire file as a single string','Only the first line'], correct: 2, expl: '<code>read()</code> returns one big string containing the whole file contents.' },
+      { id: 7, q: 'When converting tab-delimited text to CSV, how should you handle fields containing commas or quotes?', opts: ['Leave them as-is','Wrap fields with commas in double quotes and <em>double</em> any embedded double quotes','Remove commas from the data','Escape commas with backslashes'], correct: 1, expl: 'CSV convention: quote fields with commas and double any embedded quotes before quoting.' },
+      { id: 8, q: 'To <strong>write</strong> a pickled object with <code>pickle.dump</code>, open the file in:', opts: ['<code>w</code>','<code>wb</code>','<code>a</code>','<code>r+</code>'], correct: 1, expl: 'Pickle writes binary data; use <code>wb</code>.' },
+      { id: 9, q: 'To <strong>read</strong> a pickled object with <code>pickle.load</code>, open the file in:', opts: ['<code>rb</code>','<code>r</code>','<code>wb</code>','<code>ab</code>'], correct: 0, expl: 'Binary read mode <code>rb</code> is required for pickled data.' },
+      { id: 10, q: 'To create an ASCII-only pickle (easier to debug), call <code>pickle.dump</code> with:', opts: ['<code>encoding=\"ascii\"</code>','<code>protocol=0</code>','<code>text=True</code>','Open file with <code>mode=\"wt\"</code>'], correct: 1, expl: 'Protocol 0 produces a printable (ASCII) representation.' },
+      { id: 11, q: 'When loading multiple pickled objects in a loop, which exception do you catch to detect end-of-file?', opts: ['<code>StopIteration</code>','<code>EOFError</code>','<code>ValueError</code>','<code>KeyError</code>'], correct: 1, expl: 'Catch <code>EOFError</code> and <code>break</code> to end the loop.' },
+      { id: 12, q: 'Using a context manager <code>with open(...)</code> is preferred because it:', opts: ['Speeds up I/O automatically','Closes the file when the block exits (even on errors)','Forces binary mode','Skips blank lines automatically'], correct: 1, expl: 'The context manager guarantees timely file closure.' },
+      { id: 13, q: 'In the FASTA length script, the test <code>if name:</code> works because:', opts: ['Empty strings are truthy in Python','<code>name</code> is a global variable','Empty strings are falsy in Python','<code>name</code> was initialized to <code>None</code>'], correct: 2, expl: 'An empty string is falsy; once set, the prior record name makes the test true.' },
+      { id: 14, q: 'Which shell operator redirects standard output to a file (<em>overwriting</em> by default)?', opts: ['<code><</code>','<code>></code>','<code>>></code>','<code>|</code>'], correct: 1, expl: '<code>></code> redirects stdout and truncates the target file unless you use <code>>></code> to append.' },
+      { id: 15, q: 'Which is a <strong>correct</strong> function definition?', opts: ['<code>def add(a,b) -&gt; return a + b</code>','<code>function add(a,b): return a+b</code>','<code>def add(a,b): return a + b</code>','<code>def add: (a,b) return a+b</code>'], correct: 2, expl: 'Functions start with <code>def</code>, include parameters in parentheses, and use a colon.' },
+      { id: 16, q: 'Which statement about <code>lambda</code> is true?', opts: ['A <code>lambda</code> must have a name','A <code>lambda</code> can contain multiple statements','A <code>lambda</code> defines an anonymous function with a single expression','<code>lambda</code> functions are always faster than <code>def</code>'], correct: 2, expl: 'Lambdas are anonymous, single-expression functions.' },
+      { id: 17, q: 'Which trio of built-ins pairs naturally with lambdas for functional-style processing?', opts: ['<code>map</code>, <code>filter</code>, <code>reduce</code>','<code>join</code>, <code>split</code>, <code>format</code>','<code>open</code>, <code>read</code>, <code>close</code>','<code>append</code>, <code>extend</code>, <code>insert</code>'], correct: 0, expl: 'The slides demonstrate <code>map</code>, <code>filter</code>, and <code>reduce</code> with lambdas.' },
+      { id: 18, q: 'Given <code>import math</code>, how do you call square root?', opts: ['<code>sqrt(9)</code>','<code>math.sqrt(9)</code>','<code>from.math.sqrt(9)</code>','<code>math::sqrt(9)</code>'], correct: 1, expl: 'With module imports, prefix functions with the module name.' },
+      { id: 19, q: 'Which import style is <strong>discouraged</strong> in larger scripts using multiple modules?', opts: ['<code>import math</code>','<code>from math import sqrt</code>','<code>from math import *</code>','<code>import math as m</code>'], correct: 2, expl: 'Wildcard imports make it hard to see where names come from.' },
+      { id: 20, q: 'In protein motif detection, the regexp <code>N[^P][ST]</code> matches:', opts: ['N followed by P or S then T','N, then any residue except P, then S or T','Any three residues','N, then S or T, then any residue including P'], correct: 1, expl: 'It encodes the N-glycosylation consensus: N, not P, then S/T.' },
+      { id: 21, q: 'Which <code>re</code> function scans a string for a match anywhere?', opts: ['<code>re.match</code>','<code>re.search</code>','<code>re.begin</code>','<code>re.scan</code>'], correct: 1, expl: '<code>search</code> scans; <code>match</code> checks only at the start.' },
+      { id: 22, q: 'Which symbol anchors a regex at the <em>start</em> of the string?', opts: ['<code>$</code>','<code>^</code>','<code>\\b</code>','<code>.</code>'], correct: 1, expl: '<code>^</code> matches the start; <code>$</code> matches the end.' },
+      { id: 23, q: 'In the <code>os</code>/<code>shutil</code> mapping, which function removes a <em>file</em>?', opts: ['<code>os.rmdir</code>','<code>shutil.move</code>','<code>os.remove</code>','<code>shutil.copy</code>'], correct: 2, expl: '<code>os.remove</code> removes files; <code>os.rmdir</code> removes directories.' },
+      { id: 24, q: 'What is true about <code>sys.argv</code>?', opts: ['It contains only integers','It is a list of command-line arguments as strings; <code>sys.argv[0]</code> is the script name','It is a dict of flags and values','It is available only on Windows'], correct: 1, expl: 'Command-line args arrive as strings; index 0 holds the script name.' }
+    ];
+
+    const questionsEl = document.getElementById('questions');
+    const tmpl = document.getElementById('questionTmpl');
+    const resultEl = document.getElementById('result');
+    const form = document.getElementById('quizForm');
+    const answeredCountEl = document.getElementById('answeredCount');
+    const totalCountEl = document.getElementById('totalCount');
+    const barFillEl = document.getElementById('barFill');
+
+    totalCountEl.textContent = DATA.length;
+
+    function renderQuestions() {
+      questionsEl.innerHTML = '';
+      DATA.forEach((item, idx) => {
+        const node = tmpl.content.cloneNode(true);
+        const q = node.querySelector('.question');
+        q.dataset.qid = item.id;
+        q.id = `q${item.id}`;
+        node.querySelector('.qid').textContent = `${item.id}) `;
+        node.querySelector('.qtext').innerHTML = item.q;
+        const choices = node.querySelector('.choices');
+        item.opts.forEach((opt, i) => {
+          const choiceId = `q${item.id}_${i}`;
+          const wrap = document.createElement('label');
+          wrap.className = 'choice';
+          const radio = document.createElement('input');
+          radio.type = 'radio';
+          radio.name = `q${item.id}`;
+          radio.value = i;
+          radio.id = choiceId;
+          radio.addEventListener('change', updateProgress);
+          const text = document.createElement('div');
+          text.innerHTML = `<strong>${String.fromCharCode(65+i)}.</strong> <span>${opt}</span>`;
+          wrap.appendChild(radio);
+          wrap.appendChild(text);
+          choices.appendChild(wrap);
+        });
+        questionsEl.appendChild(node);
+      });
+    }
+
+    function getSelections() {
+      const entries = [];
+      DATA.forEach(item => {
+        const selected = document.querySelector(`input[name="q${item.id}"]:checked`);
+        entries.push({ id: item.id, choice: selected ? Number(selected.value) : null });
+      });
+      return entries;
+    }
+
+    function updateProgress() {
+      const selections = getSelections();
+      const answered = selections.filter(s => s.choice !== null).length;
+      answeredCountEl.textContent = answered;
+      const pct = Math.round((answered / DATA.length) * 100);
+      barFillEl.style.width = pct + '%';
+    }
+
+    function grade() {
+      const selections = getSelections();
+      let correct = 0;
+      let unanswered = 0;
+
+      selections.forEach(sel => {
+        const meta = DATA.find(d => d.id === sel.id);
+        const card = document.getElementById(`q${sel.id}`);
+        card.classList.remove('correct','incorrect');
+        const fb = card.querySelector('.feedback');
+        if (sel.choice === null) {
+          unanswered++;
+          fb.innerHTML = `<span class="badge bad">Unanswered</span> Please select an option.\n<BR>${meta.expl}`;
+          card.classList.add('incorrect');
+        } else if (sel.choice === meta.correct) {
+          correct++;
+          fb.innerHTML = `<span class=\"badge ok\">Correct</span> ${meta.expl}`;
+          card.classList.add('correct');
+        } else {
+          const letter = ['A','B','C','D'][meta.correct];
+          fb.innerHTML = `<span class=\"badge bad\">Incorrect</span> Correct answer: <strong>${letter}</strong>. ${meta.expl}`;
+          card.classList.add('incorrect');
+        }
+      });
+
+      const scorePct = Math.round((correct / DATA.length) * 100);
+      resultEl.classList.add('visible');
+      resultEl.innerHTML = `
+        <h2>Your result</h2>
+        <div class="scorebig">${correct}/${DATA.length} (<strong>${scorePct}%</strong>)</div>
+        <div class="hint">${unanswered ? (unanswered + ' unanswered question' + (unanswered>1?'s':'')) : 'All questions answered.'}</div>
+      `;
+      document.getElementById('submitBtn').textContent = 'Re-check';
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function resetQuiz() {
+      form.reset();
+      document.querySelectorAll('.question').forEach(q => q.classList.remove('correct','incorrect'));
+      document.querySelectorAll('.feedback').forEach(f => f.textContent = '');
+      resultEl.classList.remove('visible');
+      resultEl.innerHTML = '';
+      document.getElementById('submitBtn').textContent = 'Check answers';
+      updateProgress();
+    }
+
+    document.getElementById('resetBtn').addEventListener('click', resetQuiz);
+    document.getElementById('printBtn').addEventListener('click', () => window.print());
+
+    form.addEventListener('submit', (e) => {
+      e.preventDefault();
+      grade();
+    });
+
+    renderQuestions();
+    updateProgress();
+  </script>
+</body>
+</html>
+

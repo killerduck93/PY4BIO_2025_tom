@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head><meta charset="utf-8">
+  <title>DNA sequence complemntator</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+ </head>
+ <body style="background-color:#e7f5f5;">
+ <div class="container"><h2>Reverse complementator</h2>
+  <form action='/cgi-bin/reversec.py' method='post'>
+   <div class="row">
+   <div class="col-sm-8">
+   <div class="form-group">
+    <label for="dnaseq">Enter the DNA sequence:</label>
+    <textarea name="dnaseq" rows="5" cols="40"></textarea>
+   </div>
+   </div>
+   </div>
+   <div class="row">
+   <div class="col-sm-8">
+   <div class="form-group">
+    <label for="title">Job title (optional):</label>
+    <input type="text" size="30" name="title" value="">
+    <br>
+    <button type="submit" class="btn btn-primary">Send
+    </button>
+   </div>
+   </div>
+   </div>
+  </form>
+ </div>
+ </body>
+</html>

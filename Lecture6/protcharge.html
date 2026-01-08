@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head><meta charset="utf-8">
+  <title>Protein Charge Calculator</title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+ </head>
+ <body style="background-color:#e7f5f5;">
+ <div class="container"><h2>Protein Charge Calculator</h2>
+  <form action='/cgi-bin/protcharge.py' method='post'>
+   <div class="row">
+   <div class="col-sm-8">
+   <div class="form-group">
+    <label for="aaseq">Enter the amino-acid sequence:</label>
+    <textarea name="aaseq" rows="5" cols="40"></textarea>
+   </div>
+   </div>
+   </div>
+   <div class="row">
+   <div class="col-sm-8">
+   <div class="form-group">
+    <label for="prop">Do you want to see the proportion of
+       charged amino-acid?</label>
+    <div class="radio">
+     <label>
+      <input type="radio" name="prop" value="y">Yes
+     </label>
+    </div>
+    <div class="radio">
+     <label>
+      <input type="radio" name="prop" value="n">No
+     </label>
+    </div>
+    <label for="title">Job title (optional):</label>
+    <input type="text" size="30" name="title" value="">
+    <br>
+    <button type="submit" class="btn btn-primary">Send
+    </button>
+   </div>
+   </div>
+   </div>
+  </form>
+ </div>
+ </body>
+</html>

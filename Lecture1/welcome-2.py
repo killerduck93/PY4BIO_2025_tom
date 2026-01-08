@@ -1,0 +1,7 @@
+print( "Welcome ", end='' )
+print( "to ", end='' )
+print( "the ", end='' )
+print( "Wonderful ", end='' )
+print( "World ", end='' )
+print( "of ", end='' )
+print( "Bioinformatics!" )

@@ -1,0 +1,696 @@
+LOCUS       hg19_knownGene_uc021vdr.1 1000 bp    DNA              UNK 01-JAN-1980
+DEFINITION  hg19_knownGene_uc021vdr.1 range=chr2:10261695-10262694 5'pad=0
+            3'pad=0 strand=+ repeatMasking=none.
+ACCESSION   hg19_knownGene_uc021vdr
+VERSION     hg19_knownGene_uc021vdr.1
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+ORIGIN
+        1 tagtacatta attcctagtc ctaaaatcat tctgtgaact ttctcccagg aatttttgct
+       61 cagtttgcaa ttaaaacaac tttttttctt ctctttttaa tggcagaggc ggggtctcac
+      121 tatgttgccc aggatggtct ccagctcctg gcctcaaaca atcctcctgc cttggcctcc
+      181 caaagtgctg ggattacagg cgtgagccac cgcgcccagc cacagtttgc aattcttaag
+      241 gcaagggtga caataggggt caggggtctg acaggagaca ggatttctgt ggaaaactgc
+      301 accaagggcc ttctcgccat gtcccgtagt ttgaaggttt acaaaggact gcacatttta
+      361 catgagtcat ctcaacgaac gctctcctca ccgcattaac agtccacgcg gttacgagtc
+      421 ccattttact cacggggaca ccgaatctgt aagaagcctg gtcgcttgtc ccagcaaaac
+      481 gagccacggg gctcagcggc cctaactttt aggctgtagg gtcctcgccg accaccccgc
+      541 caaaatgtca ggcctcgggg cccttgcacc cccaccgcag ggacacggat cgaaagggtc
+      601 gcagcaacgc ctcccccgca cccaggagcg ttttccaggc ctttgcacca acctcgttgg
+      661 ctaagccccc tgcccggcgg cggcccggct gggaggaggt gctttcggga ggcggggccg
+      721 cggcccgggg atcctctcgc gcccgcgggc tccaatcgct gctcctcacg caatcctaaa
+      781 cggttcccgg gcgaaccggg gcccgcgcgc gccaaggccg ccgagaccct caggggctgc
+      841 ggccctggtc ccgcgggacc tgtgggggcc tgggcggcgg cgcccccgac ccagccagcg
+      901 gacgggccgg ggggggaacc gggaggtccc ggggggcgtc cacgggggtg tccccggggg
+      961 tctccggaag gcgccggcgg aggctcccgc gctgcgcttg
+//
+LOCUS       hg19_knownGene_uc003csh.1 1000 bp    DNA              UNK 01-JAN-1980
+DEFINITION  hg19_knownGene_uc003csh.1 range=chr3:48229802-48230801 5'pad=0
+            3'pad=0 strand=- repeatMasking=none.
+ACCESSION   hg19_knownGene_uc003csh
+VERSION     hg19_knownGene_uc003csh.1
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+ORIGIN
+        1 cttagaaaat ggggataatt cctatgtcac agagttgtaa agattaaatg aattaataca
+       61 gattaacaca ctgggaacag tgtcaagtgc ataagcatta tgtaaacttt agctattatt
+      121 tgctattatt gtgtttgctg ttatttctct ctaggagctc ccagggggct aagaagtggt
+      181 gggaaagaaa gaaatgattc taagagcatc caataagggc tagaatggaa gtgagcaaaa
+      241 aatgctgagg cccacagcac aggttgtact gcggggttca aatcccatga ggccagcagc
+      301 acccagggtc tgtgagccct ccagagttgg gccctggtgg tcgagtccag tcctgggggt
+      361 cattgcattc cctccctcat tataaaatgg ggcctggagg cccggggcgg aagaaagggg
+      421 tccacaatac tgcacggtta gaggccgagc caaggctgga tccggccaga cctccacagg
+      481 tcttccttag cctccacatt gcctcagagt gtggggcgcc cggctggggg cgaggtagcg
+      541 gaggcccaaa gggggccgaa gctaactgga cggcagctcg cgatgggaac tacgcttccc
+      601 agcatgcgac ggggcaaagg ggcctttcag ccgcgagcag cgcctcgcag gttctgctgg
+      661 gagttttcat tgacctctgc tccccctctc attttgatcc ccgctcttct gctctgggct
+      721 ccgccccctt ctgagagccg atgacctggc agagtcccgc gagccgcttt cttcttcccc
+      781 tctcattggc ccagcctagc tgccattcgg ttgagaggag gagaagttgc ttactgattg
+      841 gtggattccg tttggcgcca actaggaaag gggggcgggg cagcagctgg ccccactgag
+      901 ccgctattac cgcgaaaggc cggcctggct gcgacagcct gggtaagagg tgtaggtcgg
+      961 cttggttttc tgctacccgg agctgggcaa gcgggtggga
+//
+LOCUS       hg19_knownGene_uc003fqz.3 1000 bp    DNA              UNK 01-JAN-1980
+DEFINITION  hg19_knownGene_uc003fqz.3 range=chr3:186524291-186525290 5'pad=0
+            3'pad=0 strand=- repeatMasking=none.
+ACCESSION   hg19_knownGene_uc003fqz
+VERSION     hg19_knownGene_uc003fqz.3
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+ORIGIN
+        1 tctgcataac cacacatcac attgtctgtc actctcctag tctgtaaagc tacttgaggg
+       61 catctcgagc gttttccctg ctgtatctgc aggcatctaa cacagtgcgt ggacattctg
+      121 taagcatttg ttgcaagata aatgaaaaaa acgtacaaag ttaacaatgg atatcatgct
+      181 gagtttgtgc caaacaaaac agtcatttga agaagacccg gaacaacctt atgggttagt
+      241 aattagtaaa gaccagtaga gaaggtggcc tttgagaagg gtcaggtttc aataggatta
+      301 aggagcattt cagagctaaa ccaagtactt ggaagagata aaagcagtgg gctcaggcac
+      361 cagcctagcc cactgtgcat gaagcttggt ggggctaaac atgattatca gtcctttaac
+      421 ttttattgaa cgccttcact tccagatttc taagtggggc tcaggaatta taatagatgt
+      481 ccacagctgc atggtcttct ctctccacaa cacgcagaca ctattagaag taaaagccac
+      541 gtgtcctcaa gagggcaagg caaagcatct tcagatgtct ctgcccttaa agcacacgcg
+      601 ttctgctctg cgacgaagca ggacaaggag gacagggacc tgcacctccg gaggcccgca
+      661 cctacgaaga tagcgggctc gggaccttcg gtggaccggc agggttccag aggcccgcgc
+      721 gccgccgccc cgccctcatt gctgagcctg ccaggtaagc agccccagcg ccgtgcccgc
+      781 gcgacctcta ctccttccgg gagggtcgcg ctcacgtctg aagtgggagc aatgcaccgg
+      841 gacagggaca cctcctaggc catgcctgtt ccagtccagt tctgcctgaa agtccggctg
+      901 gctcatcacc tgcctaaata aaaccgtata cgggcaaact ccctccgcaa gcagcgcgcc
+      961 ccagcaccgg aagtgacgcg ttacgtgccc gcgtattcct
+//
+LOCUS       hg19_knownGene_uc031rzi.1 1000 bp    DNA              UNK 01-JAN-1980
+DEFINITION  hg19_knownGene_uc031rzi.1 range=chr3:48229802-48230801 5'pad=0
+            3'pad=0 strand=- repeatMasking=none.
+ACCESSION   hg19_knownGene_uc031rzi
+VERSION     hg19_knownGene_uc031rzi.1
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+ORIGIN
+        1 cttagaaaat ggggataatt cctatgtcac agagttgtaa agattaaatg aattaataca
+       61 gattaacaca ctgggaacag tgtcaagtgc ataagcatta tgtaaacttt agctattatt
+      121 tgctattatt gtgtttgctg ttatttctct ctaggagctc ccagggggct aagaagtggt
+      181 gggaaagaaa gaaatgattc taagagcatc caataagggc tagaatggaa gtgagcaaaa
+      241 aatgctgagg cccacagcac aggttgtact gcggggttca aatcccatga ggccagcagc
+      301 acccagggtc tgtgagccct ccagagttgg gccctggtgg tcgagtccag tcctgggggt
+      361 cattgcattc cctccctcat tataaaatgg ggcctggagg cccggggcgg aagaaagggg
+      421 tccacaatac tgcacggtta gaggccgagc caaggctgga tccggccaga cctccacagg
+      481 tcttccttag cctccacatt gcctcagagt gtggggcgcc cggctggggg cgaggtagcg
+      541 gaggcccaaa gggggccgaa gctaactgga cggcagctcg cgatgggaac tacgcttccc
+      601 agcatgcgac ggggcaaagg ggcctttcag ccgcgagcag cgcctcgcag gttctgctgg
+      661 gagttttcat tgacctctgc tccccctctc attttgatcc ccgctcttct gctctgggct
+      721 ccgccccctt ctgagagccg atgacctggc agagtcccgc gagccgcttt cttcttcccc
+      781 tctcattggc ccagcctagc tgccattcgg ttgagaggag gagaagttgc ttactgattg
+      841 gtggattccg tttggcgcca actaggaaag gggggcgggg cagcagctgg ccccactgag
+      901 ccgctattac cgcgaaaggc cggcctggct gcgacagcct gggtaagagg tgtaggtcgg
+      961 cttggttttc tgctacccgg agctgggcaa gcgggtggga
+//
+LOCUS       hg19_knownGene_uc003gdi.1 1000 bp    DNA              UNK 01-JAN-1980
+DEFINITION  hg19_knownGene_uc003gdi.1 range=chr4:1714031-1715030 5'pad=0 3'pad=0
+            strand=- repeatMasking=none.
+ACCESSION   hg19_knownGene_uc003gdi
+VERSION     hg19_knownGene_uc003gdi.1
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+ORIGIN
+        1 aacctgttct caggtgtagt gcacccgttg gggttctagt tggctggatc cgcggggccg
+       61 tcagctgcaa ctgtgacggc ggggaagcgg gacgggatgg tgcggatcta caggacctcg
+      121 cctccaggtg gaacctacct gctgagccag ggattcttca ggatacaaac ccagtcaact
+      181 ccaggcagag ggtgggagcg tcatgcaccg gcgacacagt ggaggacgtc atggacgggc
+      241 agggaggcag cggcaaccga aactagcggc tcagtcggtg gccggtgtgc ggtcaacggc
+      301 cagggcagtg ggaccggaaa gactcagtgt agttgtcaac tgttgcgacc taaaaggtta
+      361 ctccaaaact ttaagcggct caaaacaata gacggcgcgt acggggcctg cagcggccac
+      421 gggaccgtgg gaagcagtca gtacccgcca caggccgcgc cttccgggtt ccgggttccg
+      481 ggttcccgcc agggaggaga cacgccccca cctgggcagg aaccaagcag agccgcgctc
+      541 cacccaggcc ggaaccaatg ggagatgcgc cacgacccag gccgagaaac gtgccgctta
+      601 cccttccccc acgacctgcg ccgcgtcgcg cgcggccgaa tctcccgcca aagctgcccc
+      661 cgcccgccaa ggcgcgacct atcagcgtcg cagaggcccg cggcggcccg gccgcctcaa
+      721 tcccgcgggt gggggcaacc ttttcctcag gcctctcctc agcccacggc gtccatctgg
+      781 ctcccgagcc gagggccggg cagtcgggct tcgcggctgc ccgcggtccc gaggcctcgc
+      841 cctagcccca gtcggctcgc gaggcgcgca cagctgagtg gacccctgcg gcgtggcccg
+      901 atggtctcgc ccgacccggc gcgcgcggga ggccgagggg cggggcccgg cgcccacata
+      961 aaggcggttg ggggcggggc gcgcagagct cgtgagcgcc
+//
+LOCUS       hg19_knownGene_uc003gdl.1 1000 bp    DNA              UNK 01-JAN-1980
+DEFINITION  hg19_knownGene_uc003gdl.1 range=chr4:1714072-1715071 5'pad=0 3'pad=0
+            strand=- repeatMasking=none.
+ACCESSION   hg19_knownGene_uc003gdl
+VERSION     hg19_knownGene_uc003gdl.1
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+ORIGIN
+        1 cccctgcatc cctcacgttg tccccaacag gaagctgtgg gaacctgttc tcaggtgtag
+       61 tgcacccgtt ggggttctag ttggctggat ccgcggggcc gtcagctgca actgtgacgg
+      121 cggggaagcg ggacgggatg gtgcggatct acaggacctc gcctccaggt ggaacctacc
+      181 tgctgagcca gggattcttc aggatacaaa cccagtcaac tccaggcaga gggtgggagc
+      241 gtcatgcacc ggcgacacag tggaggacgt catggacggg cagggaggca gcggcaaccg
+      301 aaactagcgg ctcagtcggt ggccggtgtg cggtcaacgg ccagggcagt gggaccggaa
+      361 agactcagtg tagttgtcaa ctgttgcgac ctaaaaggtt actccaaaac tttaagcggc
+      421 tcaaaacaat agacggcgcg tacggggcct gcagcggcca cgggaccgtg ggaagcagtc
+      481 agtacccgcc acaggccgcg ccttccgggt tccgggttcc gggttcccgc cagggaggag
+      541 acacgccccc acctgggcag gaaccaagca gagccgcgct ccacccaggc cggaaccaat
+      601 gggagatgcg ccacgaccca ggccgagaaa cgtgccgctt acccttcccc cacgacctgc
+      661 gccgcgtcgc gcgcggccga atctcccgcc aaagctgccc ccgcccgcca aggcgcgacc
+      721 tatcagcgtc gcagaggccc gcggcggccc ggccgcctca atcccgcggg tgggggcaac
+      781 cttttcctca ggcctctcct cagcccacgg cgtccatctg gctcccgagc cgagggccgg
+      841 gcagtcgggc ttcgcggctg cccgcggtcc cgaggcctcg ccctagcccc agtcggctcg
+      901 cgaggcgcgc acagctgagt ggacccctgc ggcgtggccc gatggtctcg cccgacccgg
+      961 cgcgcgcggg aggccgaggg gcggggcccg gcgcccacat
+//
+LOCUS       hg19_knownGene_uc003hfx.3 1000 bp    DNA              UNK 01-JAN-1980
+DEFINITION  hg19_knownGene_uc003hfx.3 range=chr4:71858265-71859264 5'pad=0
+            3'pad=0 strand=+ repeatMasking=none.
+ACCESSION   hg19_knownGene_uc003hfx
+VERSION     hg19_knownGene_uc003hfx.3
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+ORIGIN
+        1 agaggcgatg tggaaacttc tgtcttgtaa tcacaggagt gaaggtgtgg cctgtatgct
+       61 gcctagtctt gcctagaaat tgctgcacct gctgttcttt tgcttatgcc ttaacccttg
+      121 gttaccctaa ttccctattc tcttgcctca ttaggtcttt accctgacta aaaatgcact
+      181 catctagctg ggacaaatcc tacactgcat ttgtcccatc tagatgagta ttctagcaga
+      241 gtacatggca catgagtagg cattcaaaaa ttcaacatac agtacatttt gttacctatg
+      301 tgccaggtgt cgggcaggct gagttaacag ctgaacagaa acctacctac ccaacgtgct
+      361 aacttctata cagcatggtc gtgcatccaa atcaaatgga aagcggtatg ggagatctgg
+      421 aaaggcctcc tgtgggtggc atctgactac ctaaattccc atcccagttt cacttactga
+      481 ctttgacact tggaacaagc agcctctcag tgcctgtttt cccactggca ggtaaatggg
+      541 ctaatgacgg tatttctggc actagacttc gttaattaat gaaaagcaca tagaagaaaa
+      601 cagcctggct ctctaagtgg gcagtgcgat tcccaaggac ggcacttcgc ctgatagtct
+      661 tcctctaggc tgagaagcca gagtaaatcc atttgatttt cctaccacac agtgccttct
+      721 ccccagatga gttcaaagct ttaagtctat ccagttctgt ccagacgcgt ctgttcatct
+      781 ccaacaggcc cactagagag gcgggttttc caaagcctgg cacggcccac tgcaggtgac
+      841 gccctctgcc ctccagcgcc ctcaggcctc tggggtccac ccttcctccc cacccgactc
+      901 cggaacctct tcccgcgccc tgcccgggcg cctggctgct tggggtagag gccttccgcc
+      961 acacgcgcgg ccccgccccg gccttcacgt gacctggcgt
+//
+LOCUS       hg19_knownGene_uc003jkc.2 1000 bp    DNA              UNK 01-JAN-1980
+DEFINITION  hg19_knownGene_uc003jkc.2 range=chr5:36151145-36152144 5'pad=0
+            3'pad=0 strand=+ repeatMasking=none.
+ACCESSION   hg19_knownGene_uc003jkc
+VERSION     hg19_knownGene_uc003jkc.2
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+ORIGIN
+        1 agttgtagta tagtttgccc aatggatttc gcatggtcat tgtacctgga atatgtcacg
+       61 ctccctactc ttactgcccc caaactcttc tcagcagaga taggctgaaa gcagctcgct
+      121 tttaggcggc gacgcaaaca cacgtagcca gctgagcgac agcaagcaac caaatggctt
+      181 tgctggaggc cccctgcgtg cacgggtaaa gctcgttgca aaatacagtc ctttcattta
+      241 ttcccatgtt gctatttatg agacctgtca aggctgcaag ggcatgcgca gccttcccac
+      301 cacacaggac ccgctggggt ctccggctcc cctaaaatta aaccattgtc tctcgttcca
+      361 acggcgtgtt tagctgttgt gcgttatttt acagataaag gaaggatccc gtccacagac
+      421 ccaattctta gggccgcctt ctccccgacg gaggaagaag cttcctggca aaaggacgaa
+      481 caggtgcgac gccagcagtt cgcagcctct cacctggccg gcgggctggg ctactgtcac
+      541 cactcagcag ccaaggactt gggccccgca gcggcggcca ctcggggtct gccgggtccc
+      601 ctctctttcc gcctgctctc ggccccggac cccagactca aaagcgcctc acgcgttccg
+      661 ccttaggctc accgtccgat ctcgccagac agcgtctgga cgggaccggg aaacggcggc
+      721 cgccacagct gtccaggttc tgggatccac gctcagagac gacagcgctg gcgatcacca
+      781 gaaggcctgc gggctcccga gaaaggaaaa tccgtctaca gtccagcggc tgacatttcc
+      841 cagtcagccg tagcgccgcc cgcttccgcc tccccgccta ccccgtgggc cgaccagtcc
+      901 cgctcccgcg gggggttgtg ggtatctcga aggcgggtaa agctgcaagg gaaggaagta
+      961 agggcgagcc cgtcggacta cgaagcggga cggaaactac
+//
+LOCUS       hg19_knownGene_uc003ldb.1 1000 bp    DNA              UNK 01-JAN-1980
+DEFINITION  hg19_knownGene_uc003ldb.1 range=chr5:137800181-137801180 5'pad=0
+            3'pad=0 strand=+ repeatMasking=none.
+ACCESSION   hg19_knownGene_uc003ldb
+VERSION     hg19_knownGene_uc003ldb.1
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+ORIGIN
+        1 ttcggtcccc caaaggtggg ctctttgccg gcggggacta gggaacagcc tttcggttcc
+       61 gggggagcac aggggacccc aggcaccagc agccccatcc caccgacagg tggcagaggc
+      121 aaggcagctc actgctatac agtgtcccaa gaaccaagtg gccgtgactt cctatcctca
+      181 atttcccagc gacacccgga aagacaccgt gccatagatc gaggcccggg gtcaaggccc
+      241 cgcctctcct gggcggcccc tgcccaggcg ggcccagccg ctcctccccc gcactcccgg
+      301 ttcgctctca cggtccctga ggtgggcggg cgggccctgg atgacagcga tagaaccccg
+      361 gcccgactcg ccctcgcccc cgctctgggt ctgggcttcc ccagcctagt tcacgcctag
+      421 gagccgcctg agcagccgcg cgcccagcgc cacacgccac gagccctccc cgcctgggcg
+      481 tccccggatc ccgcgagcgc tcgggctccc ggcttggaac cagggaggag ggagggagcg
+      541 agggagcaac cagctgcgac ccggaaatgc catataagga gcaggaagga tcccccgccg
+      601 gaacaaccct tatttgggca gcaccttatt tggagtggcc cgatatggcc cggccgcttc
+      661 cggctctggg aggagggaag aaggcggagg gaggggcaac gcgggaactc cggagctgcg
+      721 cgggtcccgg aggccccggc ggcggctaga gctctaggct tccccgaagc ctgggcgcct
+      781 gggatgcggg cgcgggcgcg ggccctaggg tgcaggatgg aggtgccggg cgctgtcgga
+      841 tggggggctt cacgtcactc cgggtcctcc cggccggtcc tgccatatta gggcttcctg
+      901 cttcccatat atggccatgt acgtcacgac ggaggcggac ccgtgccgtt ccagaccctt
+      961 caaatagagg cggatccggg gagtcgcgag agatcccagc
+//
+LOCUS       hg19_knownGene_uc003usv.1 1000 bp    DNA              UNK 01-JAN-1980
+DEFINITION  hg19_knownGene_uc003usv.1 range=chr7:99698381-99699380 5'pad=0
+            3'pad=0 strand=- repeatMasking=none.
+ACCESSION   hg19_knownGene_uc003usv
+VERSION     hg19_knownGene_uc003usv.1
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+ORIGIN
+        1 gcgggtcccc cttggaggac agaatgaaga attgggaaat catggccgtt ctggagagta
+       61 gacaagaaga cggcgaaagt cgggcctgcc ccgccctgcg gccccggaac aaaagaacgc
+      121 gtgtgcgctg gccctttaag agcgattctc ctccgcccgc gccagctcgg accgcgggaa
+      181 acccggcgcc tgcactaccc cgcccggaga ttcccttccg acgcccgcac cgcctccccg
+      241 tcactcattc taggcccgca cggtgattgg cttgcggcta gcgggaggtg aagaaggccg
+      301 ccttgtccga ttggcccgca cgcagtggcg ccggtcacgt ggggggcgac gtttcgcgcc
+      361 aatttcggtt ggccggccac agtccaccgc gcggagattc tcagcttccc caggagcaag
+      421 acctctgagc ccgccaagcg cggccgcacg gccctcggca gcgatggcac tgaaggacta
+      481 cgcgctagag aagggtacgg gtctacgagc ccgggagggc gtcctgcgcg gggagcctcc
+      541 cggggaacac ctgttggtgt gagctggggt cttgggggac cggggtcggc gggttctggg
+      601 gtgcgcgagg ccagaggcag ggtcgagctg cggcctggct aaggcccacg gggcctggga
+      661 agcgtgcggg gggccatcga tgttgaagaa aagctagtaa tcccacctgg taaaggtgtt
+      721 agggtcgtgg ggttgggggc ttgggggcgc gctaacccgg ctgggggctg cacagggaaa
+      781 agtcgcgccc aggacctcag gagagtctta agggctctgg gctcccgtgc ccgctttcct
+      841 tcgcgctttt gggcattccc aggttcccgc gccctcccca ggcgcgcgta ggccccgggg
+      901 gcgggcaggc cggggccgct gcgcgccggg attggccgtt tgaggccgcc ctccgagcgg
+      961 aagtggagcc gggcggaagt ggcgcgagga ggctggaggg
+//
+LOCUS       hg19_knownGene_uc003usw.1 1000 bp    DNA              UNK 01-JAN-1980
+DEFINITION  hg19_knownGene_uc003usw.1 range=chr7:99699428-99700427 5'pad=0
+            3'pad=0 strand=- repeatMasking=none.
+ACCESSION   hg19_knownGene_uc003usw
+VERSION     hg19_knownGene_uc003usw.1
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+ORIGIN
+        1 gtgcccagcc caaccctcct cacctggaga gcagttctag gaggctgaag ggagaaacgt
+       61 tttctgaagt tgtgaccacc aaatagaggc cgctgtgtct gatgtgaatg aaatgacggc
+      121 catggtgatg ctgagacaca ggcagggaga agagaggcgt taaaaaaagg gaggtggagt
+      181 gatcagaacc caggagacct gagctcggat cccgatgcct cttactagtc acaacagcag
+      241 tgcctttggg agatacatga catatgcctg ggcccagctt cccaatgtgg aaagggggtt
+      301 aattacacta actaccccga gttgctgagg atggagtcac gcagggagct gggcctggtg
+      361 tgttgctggc gcccattgac tctttttttt tttttcccca cccccaccta ccccgagagg
+      421 gagtctcgct ctgtctccca ggctggagtg cggtgtccgg atctcggctc actgcaacct
+      481 ctgcctcttg gattcaagcg attctcaagc ctcagcttcc cgagtagatg ggattacagg
+      541 cgcccgccac cacgcccagc tatgtttttt ttttttttgt atttttagta gaggcggagt
+      601 ttcaccatgt tggccaggct gatttcgaac tcctgacctc aggtgatccg cccgcctcgg
+      661 tctcccaaag tgctgggatt acaggcgtga gccaccgcgc cgggcctcac gttagcttta
+      721 tttggcggaa tgcacccccc aagtggaatc taccaatgaa ccagtcctgg gagggagctg
+      781 gcgcccaccc ggcccgacgg gaccccgctc ctcacccgcc tcccgccact ggttaccatg
+      841 acaaccgggg actcgtctcc tggcagtccc gtcagcttcc ggtagaagag ctcggccaca
+      901 tcccggccgc cactgtcccc gcggactggc gggtggaagg actcagtgaa ggatcctgcg
+      961 acacaggctg gccctgggcg cccctcccgc ccggcccctc
+//
+LOCUS       hg19_knownGene_uc003usx.1 1000 bp    DNA              UNK 01-JAN-1980
+DEFINITION  hg19_knownGene_uc003usx.1 range=chr7:99699428-99700427 5'pad=0
+            3'pad=0 strand=- repeatMasking=none.
+ACCESSION   hg19_knownGene_uc003usx
+VERSION     hg19_knownGene_uc003usx.1
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+ORIGIN
+        1 gtgcccagcc caaccctcct cacctggaga gcagttctag gaggctgaag ggagaaacgt
+       61 tttctgaagt tgtgaccacc aaatagaggc cgctgtgtct gatgtgaatg aaatgacggc
+      121 catggtgatg ctgagacaca ggcagggaga agagaggcgt taaaaaaagg gaggtggagt
+      181 gatcagaacc caggagacct gagctcggat cccgatgcct cttactagtc acaacagcag
+      241 tgcctttggg agatacatga catatgcctg ggcccagctt cccaatgtgg aaagggggtt
+      301 aattacacta actaccccga gttgctgagg atggagtcac gcagggagct gggcctggtg
+      361 tgttgctggc gcccattgac tctttttttt tttttcccca cccccaccta ccccgagagg
+      421 gagtctcgct ctgtctccca ggctggagtg cggtgtccgg atctcggctc actgcaacct
+      481 ctgcctcttg gattcaagcg attctcaagc ctcagcttcc cgagtagatg ggattacagg
+      541 cgcccgccac cacgcccagc tatgtttttt ttttttttgt atttttagta gaggcggagt
+      601 ttcaccatgt tggccaggct gatttcgaac tcctgacctc aggtgatccg cccgcctcgg
+      661 tctcccaaag tgctgggatt acaggcgtga gccaccgcgc cgggcctcac gttagcttta
+      721 tttggcggaa tgcacccccc aagtggaatc taccaatgaa ccagtcctgg gagggagctg
+      781 gcgcccaccc ggcccgacgg gaccccgctc ctcacccgcc tcccgccact ggttaccatg
+      841 acaaccgggg actcgtctcc tggcagtccc gtcagcttcc ggtagaagag ctcggccaca
+      901 tcccggccgc cactgtcccc gcggactggc gggtggaagg actcagtgaa ggatcctgcg
+      961 acacaggctg gccctgggcg cccctcccgc ccggcccctc
+//
+LOCUS       hg19_knownGene_uc003wfb.2 1000 bp    DNA              UNK 01-JAN-1980
+DEFINITION  hg19_knownGene_uc003wfb.2 range=chr7:148581442-148582441 5'pad=0
+            3'pad=0 strand=- repeatMasking=none.
+ACCESSION   hg19_knownGene_uc003wfb
+VERSION     hg19_knownGene_uc003wfb.2
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+ORIGIN
+        1 agcactgcaa gctcggccag ccaaagtcca gcggtggggg aaaaaacggc caaggcagca
+       61 gcagacataa tcaaacaggg cccgggtcgg cggcggtggc tcacgcctgt aatcccagca
+      121 ctttgggagg ccgaggcggg cggatcacca gaagtcggga gttcgagacc agcctgacca
+      181 agacccgtct ctactaaaaa tagaaaatta gccgggcgtg gtggcgcatg cctgtaatcc
+      241 agctactcgg gaggctgagg catgagaatc gcttgaaccc ggaaggcgga ggttgcggtg
+      301 agtcgagatc gcgccattgc actccagcct ggacaaccag agcgaaactc cgtctcagga
+      361 gaaaaaaaaa aaagtagtaa cgggtccggc ggcagcgcgc gggccgggcg agcgtctccc
+      421 ggcaaacgcg gcgccacagc tgagccgacc tccggggccc gcgccctccc ctccccgggc
+      481 accactagga gcggccagcc cgggcctcgg ctccgcgcgc ggggaaacga gcgcggcggt
+      541 taaaaccgtt accacccccg agttttgaac tggttcaaac ttggcttcca gcacccgccc
+      601 cgcccctccc ccgcccggga actctgcggc gccggttccc gccaagagcc gccggcgctt
+      661 cgtcccgccc ttcggccggt tcccgccacc tatcctcccc gcctcccgtc cgcggcgggc
+      721 tccgggcccc cgcgatgtct cccggtcccc gcgtgcctgc acaccgcctt cctgagaggc
+      781 gccgtgtgtt cagcgaaaga acaaagagac ggcggcggcg cttccacacg gccagtggcg
+      841 tcccttacag cgaaccccgc cgccgcccgc gcgcgcacgc gctgccagtg cccgcccgcc
+      901 cacgagccct gagcgcactc tgcgtggggc tggctcggcg cctccgagcc cggcgggccc
+      961 tgtgattgga cgggcgcccg cctcgcgtcc cgccaatcgg
+//
+LOCUS       hg19_knownGene_uc003xql.2 1000 bp    DNA              UNK 01-JAN-1980
+DEFINITION  hg19_knownGene_uc003xql.2 range=chr8:48871763-48872762 5'pad=0
+            3'pad=0 strand=+ repeatMasking=none.
+ACCESSION   hg19_knownGene_uc003xql
+VERSION     hg19_knownGene_uc003xql.2
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+ORIGIN
+        1 taaaatgcta aaaagaggca cttttactac aaaggggaaa aagttcccac ccaggcattg
+       61 ctaaagagtt aaaagaacat gacttcaatt acatttcttc aatttttctc aaagtaggaa
+      121 cggcaaatag aggggtttgg aaaaggtact ggtgggatta ggcgagattc aggtgaaaga
+      181 aaatactttc tcttggccgg gcccggtggc tcacgtctgt aatcccagca ctttgggagg
+      241 ccgaggcggg gggatcacga ggtcaggagt tcgagaccag cctgaccaac atggtgaaac
+      301 cccatctcta ctaaaaatac aaaaaaatta gccgggcgtg gtggcgcgcg cctgtaatcc
+      361 cagctactcg gggggctgag gcaggagaat agcttgaacc cgggaggcgg aggttgcagt
+      421 gagccgagat cgcgccactt cactccagcc tgggcgacag agcgagactc cgtctcaaaa
+      481 aaaaaaaaaa ttatttctct tgccctgccc cccactctgc atagcaatga ttgccatatt
+      541 aggggtcgtt ttcaccaact ttggctttaa aatatctttc ctctaatact agggggtaaa
+      601 aagcagtatg acaaatccct ttatacacat acacagaaat tcccccaaga atctaattgc
+      661 tgtacttcaa aataccgtca tctaaacaca gagaagcgcc gggctgcccg gctccagaac
+      721 gactcgggaa gccaggaccc acccgcggcc cagctcgggc cggtacccac ccagcaccgc
+      781 ggggctgctg ctcaggacgc attcctgccc caggccgcgg atcagttgat gaccggccag
+      841 ggcagcaccg cagcggtccg cagcggacaa ggtctcctgc agccgcagca gggagcaacg
+      901 cacaccggct ccggagcccg ccatgccgcc gagtcccgct cccgcgcgtg cgcccgctcg
+      961 gcccggaccc ggaaatgccc ctacgcgcgg aggcggggct
+//
+LOCUS       hg19_knownGene_uc001lyw.4 1000 bp    DNA              UNK 01-JAN-1980
+DEFINITION  hg19_knownGene_uc001lyw.4 range=chr11:4114924-4115923 5'pad=0
+            3'pad=0 strand=+ repeatMasking=none.
+ACCESSION   hg19_knownGene_uc001lyw
+VERSION     hg19_knownGene_uc001lyw.4
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+ORIGIN
+        1 ggctactttt tgtattttta gcagcggggg ggtttcacca cgttggttag gctggtctcg
+       61 aactcctgac ctcgtgatct gcccgccttg gcctcccata gtgctgggat tacaggagtg
+      121 aagcaccgcg ctggcctact ttttctattt tttgtagaaa tggggtctca ctatgttgcc
+      181 caggcttatc tcaacacctg gcctcacatg atgctcccgc cttagcctcc caaaatgctg
+      241 caattacagg ctcacttacg actttccatg atttttgaaa ttacttcaca gggagcctgg
+      301 gcagcttctg gagggcagtg agaaaccaac gaaaaggctt tagggaaaag atgccacaga
+      361 tgaaatttca taaagatcgc tttgggtagc ccaaatcaga agcttctaca ccagccttac
+      421 atattacggt tctcatctat tcttattctc cactctaagt caccaagtcc atcctacctc
+      481 cacaaggcaa ataccctgtc tctgccacca tccactgaag aaccctaaaa gcaaatgggt
+      541 actgaccctg ccctgcttaa aattctctca gggctctgat ttgcgtcagg ataaaatcca
+      601 aacgccatcg gccttgcgcg gttttcttcc agttccagag tgtcagtcct ctggccgatc
+      661 taaaagccct ggggctccaa gctgcccacg gctgtggagc ctgggctgga gcccacagcg
+      721 gacggcagtg ttagtattat tataataaat gtcagagcaa gaaaaacgtt cccgccggtt
+      781 aggttttgtt atttcaaaaa taaattaacc gcctttcctc cggcggagac gcgcaggtga
+      841 gagggcggcg cctgacccag cgggctctag gtgctacgcc agggccccga gggtcccgaa
+      901 ctcggcttgc ccacacaaaa catggtagca ggagagcagc atttccgccg ggcatgtcca
+      961 tatccaatgg ggcccatggg agaggcgtag tcttctgggt
+//
+LOCUS       hg19_knownGene_uc001nsg.3 1000 bp    DNA              UNK 01-JAN-1980
+DEFINITION  hg19_knownGene_uc001nsg.3 range=chr11:61559109-61560108 5'pad=0
+            3'pad=0 strand=+ repeatMasking=none.
+ACCESSION   hg19_knownGene_uc001nsg
+VERSION     hg19_knownGene_uc001nsg.3
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+ORIGIN
+        1 agttctggtt ctgagtaatc tgagtctgag taaagcgact gtaatatcta tttcacagaa
+       61 ctgaaaaata agaaagatga tgaatcaaag catctagtgc ctagcaggga gtattttgct
+      121 caacaggtat ttgcttcctt cctaaggctg tagggaagat gatgagataa tgtcttttat
+      181 gaaagagggc tgtaaacgta aagatctgta caaatgttaa cttcattgtc accggtcagc
+      241 caatgcttct aaaatccaga acataacaac tctagagaag taaactgccc ccattgttct
+      301 gagacactgg aattcaattc agtaaacaat cacggccccc ttcccccaaa atgataaaga
+      361 caatcactgc catttattga gcttccaatt acgggccctc tgtttggcac tgagaataca
+      421 aagatgaata gacatcatcc cagagctaga tgcgcgtcag acggtggtca ctaggaggcg
+      481 tggccgaaaa caaagaagtc catggaacgt ggccagagat ctgtacagag gctgtgggcg
+      541 ctcctaggaa agtctggcca agtgcctgag agttggaagt gcttcaccaa taaacatttg
+      601 cccagggcat tgtaggatgg gcacgggttc ggcagaagaa ctttccaaat aaagataaca
+      661 caccaccgat aacagagata tacaaactgg aaggtattca aaattcgccc cacgcctctc
+      721 gcccttagaa atcgcgagct gagaaaccta aggagttcat ggcaaggggc ttcccccttc
+      781 cccacccttc agcccaagcc ggaggttcca ggagcgtcta gccctctgga tctccggcgt
+      841 ctgaggagat aagcgcggtg tgggtcagac cccgaggggt cctcgcatct ccgtctggaa
+      901 ctcccctcaa cgctctcacc attttgcccc gcgaaggcta atccgccgct ccgccaccgg
+      961 aagaacacgt cggcaggagc aggcgcctag cacaaccgga
+//
+LOCUS       hg19_knownGene_uc009yej.3 1000 bp    DNA              UNK 01-JAN-1980
+DEFINITION  hg19_knownGene_uc009yej.3 range=chr11:4136308-4137307 5'pad=0
+            3'pad=0 strand=+ repeatMasking=none.
+ACCESSION   hg19_knownGene_uc009yej
+VERSION     hg19_knownGene_uc009yej.3
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+ORIGIN
+        1 tagattcaat tttataaaaa tgtcagtttt tcccaagtta aaatatagat tcaaagtaat
+       61 tctaggcaaa atctcaacat actgattcta aaattcatgt gaaagagcaa aagactgccc
+      121 aaaaatgtca ggtcgaaatt cctggaacct gtaaatgtta cctgataagg aaagtggtct
+      181 ttgtagagat gataaggatt ttgacatgga gagattatct tgaattatgt gggtgggccc
+      241 ttaatccaat caaaagtatc cttgtaagag agaggctgag ggagataacg actcacagaa
+      301 ggggagaaag tgatgtaaag atggagggag aaattggagt catgtggcca caaaggagag
+      361 caattagcca ctaaaagctg gacaaagcaa ggaacagatt ctccctcaaa acctctggag
+      421 ggagcactcc aaaaaaaaaa aaaaaagtga gttgcagaca ttgtgactct tgatacctcc
+      481 acttaccttt ttttttgaga tggagtttcg ctcttgtcac tgaggctgga gtgcagtggc
+      541 acgattttgg cttactgcaa cctctgcctc ccgggttcaa gcaattctcc tgcctcagcc
+      601 tcctgagtag ctgggattac aggcacgcgc caccacaccc agctaatttt tgtattttta
+      661 gtacagatgg ggtttgtcca tgttggccag gctggtctcg aactcctgac ctcaggtgat
+      721 ccacctgcct gggcctccca aagtgctggg attagaggtg tgagccactg cgcctggccc
+      781 tacttccact tatatctcga taggagaata tataatatga cctcagagca aaacaccata
+      841 gagcaaaaca ttggaaaaat tgactacaat taaaaacttc tgtgtgaaag gcaatggaag
+      901 ggcaccgtgg atcaataagg ccgagaggcg agacaaagag ggcaaaaatc ttctttattg
+      961 agctctcggg cgaggttcac tggtccgcag ggggagggcc
+//
+LOCUS       hg19_knownGene_uc010qyd.2 1000 bp    DNA              UNK 01-JAN-1980
+DEFINITION  hg19_knownGene_uc010qyd.2 range=chr11:4136308-4137307 5'pad=0
+            3'pad=0 strand=+ repeatMasking=none.
+ACCESSION   hg19_knownGene_uc010qyd
+VERSION     hg19_knownGene_uc010qyd.2
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+ORIGIN
+        1 tagattcaat tttataaaaa tgtcagtttt tcccaagtta aaatatagat tcaaagtaat
+       61 tctaggcaaa atctcaacat actgattcta aaattcatgt gaaagagcaa aagactgccc
+      121 aaaaatgtca ggtcgaaatt cctggaacct gtaaatgtta cctgataagg aaagtggtct
+      181 ttgtagagat gataaggatt ttgacatgga gagattatct tgaattatgt gggtgggccc
+      241 ttaatccaat caaaagtatc cttgtaagag agaggctgag ggagataacg actcacagaa
+      301 ggggagaaag tgatgtaaag atggagggag aaattggagt catgtggcca caaaggagag
+      361 caattagcca ctaaaagctg gacaaagcaa ggaacagatt ctccctcaaa acctctggag
+      421 ggagcactcc aaaaaaaaaa aaaaaagtga gttgcagaca ttgtgactct tgatacctcc
+      481 acttaccttt ttttttgaga tggagtttcg ctcttgtcac tgaggctgga gtgcagtggc
+      541 acgattttgg cttactgcaa cctctgcctc ccgggttcaa gcaattctcc tgcctcagcc
+      601 tcctgagtag ctgggattac aggcacgcgc caccacaccc agctaatttt tgtattttta
+      661 gtacagatgg ggtttgtcca tgttggccag gctggtctcg aactcctgac ctcaggtgat
+      721 ccacctgcct gggcctccca aagtgctggg attagaggtg tgagccactg cgcctggccc
+      781 tacttccact tatatctcga taggagaata tataatatga cctcagagca aaacaccata
+      841 gagcaaaaca ttggaaaaat tgactacaat taaaaacttc tgtgtgaaag gcaatggaag
+      901 ggcaccgtgg atcaataagg ccgagaggcg agacaaagag ggcaaaaatc ttctttattg
+      961 agctctcggg cgaggttcac tggtccgcag ggggagggcc
+//
+LOCUS       hg19_knownGene_uc021qkj.1 1000 bp    DNA              UNK 01-JAN-1980
+DEFINITION  hg19_knownGene_uc021qkj.1 range=chr11:61561834-61562833 5'pad=0
+            3'pad=0 strand=+ repeatMasking=none.
+ACCESSION   hg19_knownGene_uc021qkj
+VERSION     hg19_knownGene_uc021qkj.1
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+ORIGIN
+        1 ttttagtaga gacagggttt caccgtgttg gccaggatgg caagatgatt ttaaattgca
+       61 ccccctaaaa atccttttta atagttatac atttaataca tattaaaata taactaatag
+      121 aacacaaata ttattgctta tgagttttcc agtttagttt tttaaaaaaa attctaagtg
+      181 aatgaaagta cgggttttag ttggaagtag caaaaatcgt gagggtgatt tgggaaacac
+      241 tgctatctgg gaaacactga actctgaagt gcaatactct tttgagccca gtgactacag
+      301 catgccagac ccctaaatca ggacctgggg aggagccatg gagttaacat ttcagactga
+      361 gtggtggcga gaaaacgcaa agggaaagac ttgaaactct agcaacatta taataaaagt
+      421 agaaactctt atgtgctgag gcgatgatga agagagttta gagaagcttg tgagaaagcc
+      481 acatcacctc cattcagata tgtttgcaat cctttttcaa ggctgcctta ttagtcaggg
+      541 ttctccagag actcaaaaca aatcagatct gtttgtttag ctggtgtatt tgcctgtctt
+      601 tcaggtctgc cattatggtc cctggactcc tcaagccagg ccaagcatcc tggccttctg
+      661 tggtccttga tggagaccta tgttgcaggt tttttttgtg taataaataa tgctgctacc
+      721 ttagaatatc aacagtatct tatttctcta agcacgtggt tcaatttctg gtactcgttg
+      781 agccttacta ttgagtaaat tctcctgcta gactgagttt tttgagaatg gggaccttgt
+      841 tcatcttttt atctttagca gtgctgacat ggtgtccttt ttgttgtgtg gaatttagtt
+      901 gaaggcatga agttggtgag ataacaccag ttataacctt tctcctttcc tccgtctctg
+      961 acttgccttt cttttttagt catccctcct ctgtgttgcc
+//
+LOCUS       hg19_knownGene_uc001uuz.3 1000 bp    DNA              UNK 01-JAN-1980
+DEFINITION  hg19_knownGene_uc001uuz.3 range=chr13:34391206-34392205 5'pad=0
+            3'pad=0 strand=+ repeatMasking=none.
+ACCESSION   hg19_knownGene_uc001uuz
+VERSION     hg19_knownGene_uc001uuz.3
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+ORIGIN
+        1 caggaagagg aaacagtaat tgcaaaggcc ctgaggcaga agccttccag gcttattata
+       61 gaaagtttct cgagaacagg gattaaatct tatacttggt ggtgtggata ataccttacc
+      121 tgcaggagta attcatgtaa tatgacgatt catagaagaa catgataaat tattgattaa
+      181 taaatgagta agaggcacct tggtgaaagg ttattaagta tatttggaaa tcatttcctg
+      241 cctgtaagac cttgcaatca aatggcagga cttagggttc ttaataatac ataaaataaa
+      301 agcataaatt aaataaggaa ttaatattat gtacaatgag taaagtgcat tttgagaggc
+      361 actatttgaa gagaacttca aaagttgcat atcaacttca tatgcagaat atttttctga
+      421 ggggttcaga tgcttctaca cattttaatt ggagggcttt caaatattct agacttagaa
+      481 tgcatattaa cctcgtgtct tctcccctac agaccacatt tgggtagttt ttccatgctc
+      541 ttgattcttt tgtttctaat ccaataagaa tattgaggaa tagaggtaac aaaggatagt
+      601 gaagatcaga cattttcaag cgattcatcc aatgaagctt tactgggtac ctgccaagtg
+      661 agtgaaaccc tgagatgtat atattctagt gccgaggaca gagttccaca cctagcagat
+      721 atttagtaaa tttttgttga atgaattaag tgaatgaaag aatgaataaa tgaaaggaac
+      781 ggtcttctct gaggtatctg gatgtgacgc caaaagggtc agaaccacat tttcaattcc
+      841 gcttgataat ttctagaata taatagacgg tgcgaacaaa gagaaaataa ataaagcagt
+      901 gaacttcaga actagagggc atcgacgcgg cagctgattt tgtctgcaca cggcccccgt
+      961 agcctttccg tccaaaatca tttacgcggc cgcgaccggt
+//
+LOCUS       hg19_knownGene_uc002nsn.3 1000 bp    DNA              UNK 01-JAN-1980
+DEFINITION  hg19_knownGene_uc002nsn.3 range=chr19:30301901-30302900 5'pad=0
+            3'pad=0 strand=+ repeatMasking=none.
+ACCESSION   hg19_knownGene_uc002nsn
+VERSION     hg19_knownGene_uc002nsn.3
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+ORIGIN
+        1 aaggcttttt gtttcttttt ctgtagaaat gggggtctca ctgttaccca ggctggtctc
+       61 gaacacccca agggatcagc cgtctcggcc tcccacaatg ctgggattaa aggcgtgagc
+      121 caccgcgccc ggcctcaact ggaaggcttt aagtgagaga tggggtgcaa gggaatccca
+      181 gagtcagaaa ggtcttcaga gagccaggaa gggcttgcgg gggaggggcg catatggaag
+      241 gggcgcatgg aaggaactca cagattcctt gaatgaatga atgaacgacc caatgcactg
+      301 acggatgaat ggacaggcgg ccaggaatag cagccggccc ccagggagcc ccagaccccg
+      361 cggcctgaag ccttggttct aggccaaggc acaggcgcgg tgaccttggg gatgtccccg
+      421 cccaggactc agggcccgga actcggcgtc tcgggggcgg ggagggcgtg cctggcggga
+      481 cagcgcgcgc ggaggaacgg cgggcggtgc tcctcgggta ggccccccac acatcccctt
+      541 ggctcagccc tgccggggcc cgaacccgcg ccgcccgccg tgtttacatt ccacccgcgc
+      601 cagccacgcg gctttttgcc gctccagcgc cgctcggccc cgcccccggc gcccgcggcc
+      661 cgcccctcgc cgccgcgcgc cagacttctc ccgcgtcccg cccgccgccc cgccccgcgt
+      721 cccgcgcccc gcgccccgcg cccggccctc ggcgcgcagg ccctgtcact tggccccgcc
+      781 ctgtccgccg gccccgcccc tgattccccg tccctgcgcc tcgcgggccg gcgccgtgga
+      841 ggggcgggtc cgggggcggg gcgagggacg gggcgggacg ggctctgggt cccgcgcggc
+      901 cgctgagggg ctgggagccg cggcggggcg gtgcgagggc gggccggggc cggttccgcg
+      961 cgcagggatt ttaaatgtcc cgctctgagc cgggcgcagg
+//
+LOCUS       hg19_knownGene_uc002nso.3 1000 bp    DNA              UNK 01-JAN-1980
+DEFINITION  hg19_knownGene_uc002nso.3 range=chr19:30302561-30303560 5'pad=0
+            3'pad=0 strand=+ repeatMasking=none.
+ACCESSION   hg19_knownGene_uc002nso
+VERSION     hg19_knownGene_uc002nso.3
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+ORIGIN
+        1 cgcccctcgc cgccgcgcgc cagacttctc ccgcgtcccg cccgccgccc cgccccgcgt
+       61 cccgcgcccc gcgccccgcg cccggccctc ggcgcgcagg ccctgtcact tggccccgcc
+      121 ctgtccgccg gccccgcccc tgattccccg tccctgcgcc tcgcgggccg gcgccgtgga
+      181 ggggcgggtc cgggggcggg gcgagggacg gggcgggacg ggctctgggt cccgcgcggc
+      241 cgctgagggg ctgggagccg cggcggggcg gtgcgagggc gggccggggc cggttccgcg
+      301 cgcagggatt ttaaatgtcc cgctctgagc cgggcgcagg agcagccggc gcggccgcca
+      361 gcgcggtgta gggggcaggc gcggatcccg ccaccgccgc gcgctcggcc cgccgactcc
+      421 cggcgccgcc gccgccactg ccgtcgccgc cgccgcctgc cgggactgga gcgcgccgtc
+      481 cgccgcggac aagaccctgg tgagtctact gccgcgggct gcggacaggg actcctgggg
+      541 cccagaccgc gccggggagc tgggtggggg cggggtgcgg ccgggtcgcg ggtccccggg
+      601 cggcgtcgcg gggcgcccgg gagggtgctg agagcgcggc ggggtggggt ggaggggaca
+      661 ctgaggcagc ccgggccccg ggaggcgacg ggccggtgag ggcggcgggg gcggcgggac
+      721 cccgggtcgg gggtcggcgg gtgcccgggt cgcgggtgac aggccacccc gccatcggcc
+      781 atcttcctgg ctcgcccggc cgcccgcgcg caaaggggga aggggtactg ggcccgcggc
+      841 ctgaccccgc cgccgcctca ccccgcgccg ccccgcaggc ctcaggccgg agcagcccca
+      901 tcatgccgag ggagcgcagg gagcggtgag tgcccgcgcc gcggggccgg acgggacggg
+      961 acgggacggg acgggtggcg tgggggaggg gcggccgcgg
+//
+LOCUS       hg19_knownGene_uc002wlp.3 1000 bp    DNA              UNK 01-JAN-1980
+DEFINITION  hg19_knownGene_uc002wlp.3 range=chr20:5100648-5101647 5'pad=0
+            3'pad=0 strand=- repeatMasking=none.
+ACCESSION   hg19_knownGene_uc002wlp
+VERSION     hg19_knownGene_uc002wlp.3
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+ORIGIN
+        1 aaaaaaaata ataataataa tacaaaaatt agccgggggt ggtggtaggc acctgtaatc
+       61 ccagatactc gggaggctga ggcaggagac tcacttgaac ctgggaggcg gaggttgcaa
+      121 tgagctgaga tcgcgccact gtactccagc ctggatgaca gagcaggact ccatctcaaa
+      181 aagaaaggaa aagaaaagaa aaaatattaa atgtgtacgc tctttgactc agctgtatta
+      241 cttcaaggag ttgatatcac caaaattgcc taagtgctca aaggtgtttg tagttaaaca
+      301 acaggagatt gataaattat gttatataca tgtgatgcta tgttttaaag aggtactgat
+      361 atgataaaag atgtacgtgg cataaaatta aatgtacttt attaagtact tttccaagtg
+      421 tttacggaat gagtgcattt ttgaaaaaaa aaaagtgtat tcgaactttt aaaaaagctt
+      481 taaaagcttt atacaatgaa cgattgagtg attataagag ctggcggggg aatgttaaga
+      541 ggatgatagg gagctaagtt taacagaaca attcacctct ttatcttgtg acacctacga
+      601 gcgcatcaat tctgtaattg aaaaataaag tgcatatttg cagcagctgt actctcttca
+      661 ggctgcaagg aggcttttcc tcccggtagg cttgatttgc atttcacttt cactttcgtg
+      721 gctggaaact ttctacccac gtagtgggag gctgaggagc caccataaag ctggggcttg
+      781 acgagccggg accgggaccc gatctccaca tatgcccgga cttgttctgc ggccgggttc
+      841 aggagtcaaa gaggcgggga gacctgcgcg acgctgcccc gccctgcgcc cgcttcctcc
+      901 aatgtatgct ctagggggcg ggcctcgcgg ggagcatgga cacgattggc cctaaagtct
+      961 tccccgcaag gccgtgggct ggacagcgtg gtgacgtcgc
+//
+LOCUS       hg19_knownGene_uc002wlq.3 1000 bp    DNA              UNK 01-JAN-1980
+DEFINITION  hg19_knownGene_uc002wlq.3 range=chr20:5107269-5108268 5'pad=0
+            3'pad=0 strand=- repeatMasking=none.
+ACCESSION   hg19_knownGene_uc002wlq
+VERSION     hg19_knownGene_uc002wlq.3
+KEYWORDS    .
+SOURCE      .
+  ORGANISM  .
+            .
+FEATURES             Location/Qualifiers
+ORIGIN
+        1 tttacatctc ccaggaggca aatgctatgg ccttgtcctg attcccccac cccccaaaat
+       61 aataacattg taaaagggaa cggagagcct aagttgcgct cagaggagcc gcctccctaa
+      121 gaaggctctg catatcttca cctccaggaa ggcctcacgg agttggggga gaggggagtc
+      181 cccgcagcca gcccagcgag gcaggaggcc gtgcgccact cccgagaagc tccttcctgc
+      241 gccccggggg agccacttca gtcagaccct gagccgggac cccgacccgc cgacccctga
+      301 cgcgcgcgcc gcgaaggccg ggcacccgag ggcccttcgc gctacccggg cccggggccg
+      361 ccgtcggctg cgacaaaggg tcagagaaca agacgacccc tctgcgcgcg tcccccgcag
+      421 gcctcccgga tgcgccgctg tcccggccgc gcccaccccg acgctgccgc taccttgtcc
+      481 tcgggtggcg caaccggctc atgggccacc ctctgcctca gctctgtcat cctgggaaaa
+      541 tcggcccgac gtcgccgcga gctagcagcg aagccgccgg agcaggcagc tcggcgcggg
+      601 cacgcgcgga ctcccacggc cggccccgcc ccgcccggga ggcgcgcggc tctgagcggc
+      661 tcacagttcc cttagcagcc cagcagccag ccctggagct cggccccacc cagtgccgtc
+      721 accgcccttt cacccgggcc gagcggggtc agccttccct agccccgacc cgagagctcc
+      781 ctctcccggg agcagggctc ggagcgagtg cgcacgcgca gcgccaccat cacggtccgg
+      841 aatatccacc aatggcgcaa atacgccagg gaggcagggc gacgggggcg gggcggggcg
+      901 gagcagagtc gagaggcgcg cattggacgg cagcgtcagg ggcgggaaaa ggcgtgcgtt
+      961 tcagtgtgcg attagccaat gggagctccc gcttaaccgc
+//
