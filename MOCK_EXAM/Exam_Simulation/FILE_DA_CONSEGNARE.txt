@@ -1,0 +1,43 @@
+================================================================================
+FILE DA CONSEGNARE AL PROFESSORE - ASSIGNMENT PY4BIO 2025
+================================================================================
+
+⭐ FILE OBBLIGATORI PER LA CONSEGNA:
+
+1. related_IEP_MW.py
+   → Soluzione LEVEL 1 (Command Line)
+   → Calcola IEP e MW, filtra con logica AND
+
+2. related_IEP_MW.cgi  
+   → Soluzione LEVEL 2 (BOSS LEVEL - Web Interface CGI)
+   → Interfaccia web per la ricerca proteine
+
+3. index.html (o related_IEP_MW.html)
+   → Interfaccia utente HTML per il form di ricerca
+   → Necessario per LEVEL 2
+
+================================================================================
+TEST RAPIDO:
+================================================================================
+
+LEVEL 1:
+--------
+python related_IEP_MW.py 7 7.1 41000 42000
+
+Output atteso:
+sp|O75503|CLN5_HUMAN ... 7.04 41496.1
+sp|Q9NZJ6|COQ3_HUMAN ... 7.10 41053.6
+sp|Q9H819|DJC18_HUMAN ... 7.04 41550.1
+sp|Q0VG99|MESP2_HUMAN ... 7.05 41759.8
+
+LEVEL 2:
+--------
+- Copiare related_IEP_MW.cgi in cgi-bin del server web
+- Copiare index.html nella directory web
+- Configurare server per eseguire CGI
+- Accedere via browser
+
+================================================================================
+NOTA: Il file uniprot-all.fasta NON va consegnato (è il database fornito)
+================================================================================
+

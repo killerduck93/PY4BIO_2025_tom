@@ -7,21 +7,50 @@ ambiguous_AA_regexp = re.compile(r'[XBZJ]')  # to identify sequences with ambigu
 
 
 def prot_fasta_IEP_MW( multi_fasta_file, ambiguous_AA_regexp, verbous = 0 ):
+    """Parse a multi-FASTA protein file and compute IEP and MW for unambiguous sequences.
+
+    Parameters
+    ----------
+    multi_fasta_file : str
+        Path to a multi-FASTA file containing protein sequences.
+    ambiguous_AA_regexp : re.Pattern
+        Compiled regular expression that matches ambiguous amino-acid symbols
+        (e.g., 'X', 'B', 'Z', 'J'). Sequences matching this pattern are skipped.
+    verbous : int, optional
+        If non-zero, print a tab-separated line (description, IEP, MW) for each
+        processed sequence. Default is 0 (no printing).
+
+    Returns
+    -------
+    list
+        A list of [description, IEP, MW] for each processed (unambiguous) sequence.
+    """
+
     id_IEP_MW_table = []
-    handle = open( multi_fasta_file )
-    for record in SeqIO.parse(handle, "fasta"):
-        seq = str(record.seq)
-        if not ambiguous_AA_regexp.search(seq): # process only unambiguous protein sequences
-            X = ProtParam.ProteinAnalysis(seq)
 
-            IEP = X.isoelectric_point()
-            MW = X.molecular_weight()
+    # Use a context manager to ensure the file handle is properly closed
+    with open(multi_fasta_file) as handle:
+        # Iterate over each FASTA record in the file
+        for record in SeqIO.parse(handle, "fasta"):
+            seq = str(record.seq)
 
-            if verbous:
-                print("%s\t%.2f\t%.1f" % (record.description, IEP, MW))
+            # Skip sequences that contain ambiguous amino-acid symbols
+            if not ambiguous_AA_regexp.search(seq):
+                # Analyze sequence properties using Bio.SeqUtils.ProtParam
+                X = ProtParam.ProteinAnalysis(seq)
 
-            id_IEP_MW_table.append([record.description, IEP, MW])
+                # Compute isoelectric point (IEP) and molecular weight (MW)
+                IEP = X.isoelectric_point()
+                MW = X.molecular_weight()
 
+                # Optionally print results in a human-readable tab-separated format
+                if verbous:
+                    print("%s\t%.2f\t%.1f" % (record.description, IEP, MW))
+
+                # Store result as [description, IEP, MW]
+                id_IEP_MW_table.append([record.description, IEP, MW])
+
+    # Return list of results (unchanged behavior)
     return( id_IEP_MW_table )
 
 

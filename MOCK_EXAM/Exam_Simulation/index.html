@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Protein IEP and MW Search</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .header h1 {
+            margin-bottom: 10px;
+            font-size: 2.5em;
+        }
+        
+        .header p {
+            opacity: 0.9;
+            font-size: 1.1em;
+        }
+        
+        .content {
+            padding: 30px;
+        }
+        
+        .form-section {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 8px;
+            margin-bottom: 30px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .form-section h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+        }
+        
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .form-row.full {
+            grid-template-columns: 1fr;
+        }
+        
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .form-group label {
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #555;
+            font-size: 0.95em;
+        }
+        
+        .form-group input {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-size: 1em;
+            transition: border-color 0.3s;
+        }
+        
+        .form-group input:focus {
+            outline: none;
+            border-color: #667eea;
+            box-shadow: 0 0 5px rgba(102, 126, 234, 0.2);
+        }
+        
+        .form-group-label {
+            font-weight: 600;
+            margin-bottom: 15px;
+            color: #666;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .button-row {
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        
+        button {
+            flex: 1;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            font-size: 1em;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        
+        .btn-search {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .btn-search:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+        
+        .btn-reset {
+            background: #e9ecef;
+            color: #333;
+        }
+        
+        .btn-reset:hover {
+            background: #dee2e6;
+        }
+        
+        .results-section {
+            margin-top: 30px;
+        }
+        
+        .results-section h2 {
+            color: #333;
+            margin-bottom: 20px;
+            font-size: 1.3em;
+        }
+        
+        .results-info {
+            background: #e7f3ff;
+            padding: 12px;
+            border-radius: 4px;
+            margin-bottom: 20px;
+            color: #0066cc;
+            border-left: 4px solid #0066cc;
+        }
+        
+        .results-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+            background: white;
+            border-radius: 4px;
+            overflow: hidden;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .results-table thead {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        
+        .results-table th {
+            padding: 12px;
+            text-align: left;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85em;
+            letter-spacing: 0.5px;
+        }
+        
+        .results-table td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+        }
+        
+        .results-table tbody tr:hover {
+            background: #f8f9fa;
+        }
+        
+        .results-table tbody tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .error-message {
+            background: #ffebee;
+            padding: 15px;
+            border-radius: 4px;
+            color: #d32f2f;
+            border-left: 4px solid #d32f2f;
+            margin-bottom: 20px;
+        }
+        
+        .info-message {
+            background: #fff3cd;
+            padding: 15px;
+            border-radius: 4px;
+            color: #856404;
+            border-left: 4px solid #ffc107;
+            margin-bottom: 20px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        
+        table thead {
+            background: #667eea;
+            color: white;
+        }
+        
+        table th {
+            padding: 15px;
+            text-align: left;
+            font-weight: 600;
+        }
+        
+        table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        table tbody tr:hover {
+            background: #f8f9fa;
+        }
+        
+        table tbody tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .no-results {
+            text-align: center;
+            padding: 40px;
+            color: #999;
+            font-size: 1.1em;
+        }
+        
+        .footer {
+            background: #f8f9fa;
+            padding: 20px;
+            text-align: center;
+            color: #666;
+            border-top: 1px solid #ddd;
+            font-size: 0.9em;
+        }
+
+        .loading {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .spinner {
+            border: 4px solid #f3f3f3;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            animation: spin 1s linear infinite;
+            margin: 0 auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .hidden {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🧬 Protein Database Search</h1>
+            <p>Search UniProtKB for proteins by Isoelectric Point and Molecular Weight</p>
+        </div>
+        
+        <div class="content">
+            <form id="searchForm" class="search-form">
+                <div class="form-section">
+                    <h2>Search Criteria</h2>
+                    
+                    <div class="form-group-label">Isoelectric Point (pH) Range</div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="iep_lower">Lower Limit (pH)</label>
+                            <input type="number" id="iep_lower" name="iep_lower" step="0.1" placeholder="e.g., 7.0" value="">
+                        </div>
+                        <div class="form-group">
+                            <label for="iep_upper">Upper Limit (pH)</label>
+                            <input type="number" id="iep_upper" name="iep_upper" step="0.1" placeholder="e.g., 7.5" value="">
+                        </div>
+                    </div>
+                    
+                    <div class="form-group-label">Molecular Weight (Da) Range</div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="mw_lower">Lower Limit (Da)</label>
+                            <input type="number" id="mw_lower" name="mw_lower" step="100" placeholder="e.g., 41000" value="">
+                        </div>
+                        <div class="form-group">
+                            <label for="mw_upper">Upper Limit (Da)</label>
+                            <input type="number" id="mw_upper" name="mw_upper" step="100" placeholder="e.g., 42000" value="">
+                        </div>
+                    </div>
+                    
+                    <div class="button-row">
+                        <button type="submit" class="btn-search">🔍 Search</button>
+                        <button type="reset" class="btn-reset">Clear</button>
+                    </div>
+                </div>
+            </form>
+            
+            <div id="resultsContainer"></div>
+        </div>
+        
+        <div class="footer">
+            <p>Powered by BioPython ProtParam | UniProtKB Human Database</p>
+        </div>
+    </div>
+
+    <script>
+        const form = document.getElementById('searchForm');
+        const resultsContainer = document.getElementById('resultsContainer');
+
+        form.addEventListener('submit', async (e) => {
+            e.preventDefault();
+
+            const iepLower = document.getElementById('iep_lower').value;
+            const iepUpper = document.getElementById('iep_upper').value;
+            const mwLower = document.getElementById('mw_lower').value;
+            const mwUpper = document.getElementById('mw_upper').value;
+
+            // Validation
+            if (!iepLower || !iepUpper || !mwLower || !mwUpper) {
+                resultsContainer.innerHTML = `
+                    <div class="results-section">
+                        <div class="error-message">
+                            Error: Please enter valid numeric values for all fields.
+                        </div>
+                    </div>
+                `;
+                return;
+            }
+
+            // Show loading
+            resultsContainer.innerHTML = `
+                <div class="results-section">
+                    <div class="loading">
+                        <div class="spinner"></div>
+                        <p>Searching database...</p>
+                    </div>
+                </div>
+            `;
+
+            try {
+                // Call the API endpoint
+                const params = new URLSearchParams({
+                    iep_lower: iepLower,
+                    iep_upper: iepUpper,
+                    mw_lower: mwLower,
+                    mw_upper: mwUpper
+                });
+
+                const response = await fetch('/api/search', {
+                    method: 'POST',
+                    body: params,
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    }
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                
+                if (data.success) {
+                    if (data.count === 0) {
+                        resultsContainer.innerHTML = `
+                            <div class="results-section">
+                                <h2>Search Results</h2>
+                                <div class="results-info">
+                                    No proteins found matching the criteria.
+                                    <br>Try adjusting your search ranges.
+                                </div>
+                            </div>
+                        `;
+                    } else {
+                        let tableHtml = `
+                            <div class="results-section">
+                                <h2>Search Results</h2>
+                                <div class="results-info">
+                                    Found <strong>${data.count}</strong> protein${data.count !== 1 ? 's' : ''} matching your criteria.
+                                </div>
+                                <table class="results-table">
+                                    <thead>
+                                        <tr>
+                                            <th>UniProt ID</th>
+                                            <th>Description</th>
+                                            <th>IEP (pH)</th>
+                                            <th>MW (Da)</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                        `;
+                        
+                        data.results.forEach(protein => {
+                            tableHtml += `
+                                <tr>
+                                    <td>${protein.id}</td>
+                                    <td>${protein.description}</td>
+                                    <td>${protein.iep}</td>
+                                    <td>${protein.mw.toLocaleString()}</td>
+                                </tr>
+                            `;
+                        });
+                        
+                        tableHtml += `
+                                    </tbody>
+                                </table>
+                            </div>
+                        `;
+                        
+                        resultsContainer.innerHTML = tableHtml;
+                    }
+                } else {
+                    resultsContainer.innerHTML = `
+                        <div class="results-section">
+                            <div class="error-message">
+                                Error: ${data.error || 'Unknown error occurred'}
+                            </div>
+                        </div>
+                    `;
+                }
+            } catch (error) {
+                console.error('Fetch error:', error);
+                resultsContainer.innerHTML = `
+                    <div class="results-section">
+                        <div class="error-message">
+                            <strong>Connection Error:</strong> Could not reach the search server.
+                            <br><br>
+                            Make sure the web server is running:
+                            <br><code>python web_server.py</code>
+                            <br><br>
+                            Then open: <code>http://localhost:8001/</code>
+                        </div>
+                    </div>
+                `;
+            }
+        });
+
+        // Set default values for quick testing
+        document.getElementById('iep_lower').value = '7';
+        document.getElementById('iep_upper').value = '7.1';
+        document.getElementById('mw_lower').value = '41000';
+        document.getElementById('mw_upper').value = '42000';
+    </script>
+</body>
+</html>

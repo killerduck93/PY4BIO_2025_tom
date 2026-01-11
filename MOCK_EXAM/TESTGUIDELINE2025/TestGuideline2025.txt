@@ -1,0 +1,27 @@
+Write a script that for each protein sequence stored in the given human UniProtKB database calculates:
+
+(1) its isoelectric point
+
+(2) its molecular weight
+
+(3) returns all entries satisfying the conditions specified at the command line e.g.: 8.5 <= IEP <=8.7 AND 44000 <= MW <= 45000
+
+LEVEL 1
+
+Invoking the script without arguments triggers the display of a suggested usage statement:
+
+python related_IEP_MW.py USAGE: python3 related_IEP_MW.py < IEP lower limit (pH) > < IEP upper limit (pH) > < MW lower limit (Da) > < MW upper limit (Da) >
+
+Invoking with arguments. Get the list of proteins satisfying the requested conditions:
+
+python related_IEP_MW.py 7 7.1 41000 42000 sp|O75503|CLN5_HUMAN Ceroid-lipofuscinosis neuronal protein 5 OS=Homo sapiens GN=CLN5 PE=1 SV=2 7.04 41496.1 sp|Q9NZJ6|COQ3_HUMAN Ubiquinone biosynthesis O-methyltransferase, mitochondrial OS=Homo sapiens GN=COQ3 PE=1 SV=3 7.10 41053.6 sp|Q9H819|DJC18_HUMAN DnaJ homolog subfamily C member 18 OS=Homo sapiens GN=DNAJC18 PE=2 SV=1 7.04 41550.1 sp|Q0VG99|MESP2_HUMAN Mesoderm posterior protein 2 OS=Homo sapiens GN=MESP2 PE=1 SV=2 7.05 41759.8
+
+LEVEL 2 (BOSS LEVEL)
+
+Build a Python CGI web interface to the tool displaying the proteins satisfying the requested conditions
+
+
+
+Mi sono fatto spiegare un po' i file da Gemini
+
+Questo set di file rappresenta un'applicazione bioinformatica completa che permette di filtrare proteine da un database (file FASTA) in base al loro Punto Isoelettrico (IEP) e Peso Molecolare (MW).Il progetto mostra tre modi diversi di eseguire la stessa analisi: tramite riga di comando (CLI), tramite una vecchia tecnologia web (CGI) e tramite un framework web moderno (Flask).1. related_IEP_MW.py (Il Motore Logico)Questo è il file principale che contiene la logica computazionale. Può essere usato come script a sé stante o importato come modulo.Cosa contiene:prot_fasta_IEP_MW: Una funzione che legge un file FASTA (uniprot-all.fasta), scarta le sequenze con amminoacidi ambigui (X, B, Z, J) e calcola IEP e MW usando la libreria Biopython.retrieve_matching_proteins: Una funzione che filtra i risultati in base ai limiti numerici forniti.Esecuzione CLI: Se lanciato da terminale, accetta 4 argomenti (IEP min/max, MW min/max) e stampa i risultati nel terminale.2. related_IEP_MW.html (L'Interfaccia Utente)È una semplice pagina web che funge da interfaccia per l'utente.Cosa contiene:Un modulo (form) con quattro campi di input dove l'utente può inserire i limiti di ricerca.Un pulsante "Find similar proteins" che invia i dati al server.Nota: Il codice punta originariamente alla versione CGI (action='/cgi-bin/related_IEP_MW_cgi.py').3. related_IEP_MW_cgi.py (L'Approccio Web "Vecchio")Questo script implementa la tecnologia CGI (Common Gateway Interface). È un modo datato di creare siti dinamici dove il server esegue direttamente lo script Python a ogni richiesta.Cosa contiene:Copia gran parte della logica di related_IEP_MW.py al suo interno.Usa il modulo cgi per leggere i dati inviati dal form HTML.Output: Genera il codice HTML dei risultati usando direttamente istruzioni print.4. related_IEP_MW_Flask.py (L'Approccio Web "Moderno")Questo file usa Flask, un framework web moderno e leggero. È l'approccio standard attuale per le applicazioni Python.Cosa contiene:Integrazione: Invece di riscrivere il codice, importa related_IEP_MW come modulo (import related_IEP_MW as PP).Rotte (@app.route): * La rotta principale (/) mostra il form HTML.La rotta POST riceve i dati, chiama le funzioni del "Motore Logico" e restituisce i risultati formattati in una tabella HTML.È molto più pulito e professionale rispetto al CGI.Come funzionano insieme (Il flusso di lavoro)Input: L'utente apre related_IEP_MW.html nel browser e inserisce i valori (es. IEP tra 8.5 e 8.7).Richiesta: Quando l'utente preme invio, i dati vengono inviati o a related_IEP_MW_cgi.py o a related_IEP_MW_Flask.py.Elaborazione:Lo script apre il file uniprot-all.fasta.Per ogni proteina, calcola i valori chimico-fisici.Controlla se questi valori rientrano nei limiti scelti dall'utente.Risultato: Lo script genera una tabella HTML con le proteine corrispondenti e la invia al browser dell'utente.Tabella RiassuntivaFileTipoRuolorelated_IEP_MW.pyScript/ModuloContiene i calcoli matematici e l'accesso al database FASTA.related_IEP_MW.htmlUI (Frontend)La maschera di inserimento dati per l'utente.related_IEP_MW_cgi.pyScript CGIGestisce la richiesta web in modo "vecchia scuola".related_IEP_MW_Flask.pyApp FlaskGestisce la richiesta web in modo moderno e modulare.
