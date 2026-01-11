@@ -51,6 +51,11 @@ class ProteinSearchHandler(http.server.SimpleHTTPRequestHandler):
             path = os.path.join(path, 'index.html')
         return path
     
+    def end_headers(self):
+        """Override to add CORS headers to all responses."""
+        self.add_cors_headers()
+        super().end_headers()
+    
     def do_GET(self):
         """Handle GET requests - serve static files."""
         if self.path == "/":
@@ -59,28 +64,32 @@ class ProteinSearchHandler(http.server.SimpleHTTPRequestHandler):
         
         if self.path == "/api/search":
             # This shouldn't happen with GET, but handle it anyway
-            self.send_error(405, "Method Not Allowed")
+            self.send_response(405)
+            self.send_header('Content-Type', 'text/plain')
+            self.end_headers()
+            self.wfile.write(b"Method Not Allowed")
             return
         
-        # Add CORS headers
-        self.add_cors_headers()
-        
-        # Serve static files
+        # Serve static files (CORS headers added automatically in end_headers)
         try:
             super().do_GET()
         except Exception as e:
             print(f"Error serving GET {self.path}: {e}")
+            if not self.headers_sent:
+                self.send_error(500, f"Internal Server Error: {e}")
     
     def do_POST(self):
         """Handle POST requests for protein search."""
         if self.path == "/api/search":
             self.handle_search_request()
         else:
-            self.add_cors_headers()
-            self.send_error(404, "Not Found")
+            self.send_response(404)
+            self.send_header('Content-Type', 'text/plain')
+            self.end_headers()  # CORS headers added automatically
+            self.wfile.write(b"Not Found")
     
     def add_cors_headers(self):
-        """Add CORS headers to response."""
+        """Add CORS headers to response. Must be called AFTER send_response."""
         self.send_header('Access-Control-Allow-Origin', '*')
         self.send_header('Access-Control-Allow-Methods', 'GET, POST, OPTIONS')
         self.send_header('Access-Control-Allow-Headers', 'Content-Type')
@@ -111,10 +120,9 @@ class ProteinSearchHandler(http.server.SimpleHTTPRequestHandler):
                 }).encode('utf-8')
                 
                 self.send_response(400)
-                self.add_cors_headers()
                 self.send_header('Content-Type', 'application/json')
                 self.send_header('Content-Length', len(response))
-                self.end_headers()
+                self.end_headers()  # CORS headers added automatically
                 self.wfile.write(response)
                 return
             
@@ -129,10 +137,9 @@ class ProteinSearchHandler(http.server.SimpleHTTPRequestHandler):
             }).encode('utf-8')
             
             self.send_response(200)
-            self.add_cors_headers()
             self.send_header('Content-Type', 'application/json')
             self.send_header('Content-Length', len(response))
-            self.end_headers()
+            self.end_headers()  # CORS headers added automatically
             self.wfile.write(response)
             
         except Exception as e:
@@ -142,10 +149,9 @@ class ProteinSearchHandler(http.server.SimpleHTTPRequestHandler):
             }).encode('utf-8')
             
             self.send_response(500)
-            self.add_cors_headers()
             self.send_header('Content-Type', 'application/json')
             self.send_header('Content-Length', len(error_response))
-            self.end_headers()
+            self.end_headers()  # CORS headers added automatically
             self.wfile.write(error_response)
     
     def search_proteins(self, iep_lower, iep_upper, mw_lower, mw_upper):
@@ -231,8 +237,7 @@ class ProteinSearchHandler(http.server.SimpleHTTPRequestHandler):
     def do_OPTIONS(self):
         """Handle CORS preflight requests."""
         self.send_response(200)
-        self.add_cors_headers()
-        self.end_headers()
+        self.end_headers()  # CORS headers added automatically
 
 if __name__ == '__main__':
     # Change to server directory

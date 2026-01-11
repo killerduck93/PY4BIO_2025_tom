@@ -1,0 +1,52 @@
+================================================================================
+ISTRUZIONI PER USARE IL WEB SERVER (LEVEL 2)
+================================================================================
+
+❌ PROBLEMA: Hai aperto il file HTML direttamente (file://)
+   Questo NON funziona perché il JavaScript ha bisogno del server!
+
+✅ SOLUZIONE: Devi usare il web server
+
+================================================================================
+METODO 1: Usa il file batch (PIÙ FACILE)
+================================================================================
+
+1. Fai doppio click su: AVVIA_SERVER.bat
+2. Aspetta che appaia il messaggio "Server is listening on port 8001"
+3. Apri il browser e vai a: http://localhost:8001/
+4. NON chiudere la finestra del server!
+
+================================================================================
+METODO 2: Avvia manualmente da terminale
+================================================================================
+
+1. Apri PowerShell o CMD nella cartella Exam_Simulation
+2. Esegui: python web_server.py 8001
+3. Apri il browser e vai a: http://localhost:8001/
+4. NON chiudere il terminale!
+
+================================================================================
+IMPORTANTE:
+================================================================================
+
+✅ USA: http://localhost:8001/
+❌ NON usare: file:///C:/.../index.html
+
+Il server DEVE essere in esecuzione per far funzionare la ricerca!
+
+================================================================================
+TEST RAPIDO:
+================================================================================
+
+1. Avvia il server (AVVIA_SERVER.bat o python web_server.py 8001)
+2. Apri browser: http://localhost:8001/
+3. Inserisci:
+   - IEP Lower: 7
+   - IEP Upper: 7.1
+   - MW Lower: 41000
+   - MW Upper: 42000
+4. Clicca "Search"
+5. Dovresti vedere 4 proteine!
+
+================================================================================
+
